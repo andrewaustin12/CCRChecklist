@@ -24,6 +24,16 @@
 		3FCBDF872A6BDFAA00B0DD19 /* BuildHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF862A6BDFAA00B0DD19 /* BuildHistoryView.swift */; };
 		3FCBDF892A6BE1D400B0DD19 /* TabHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF882A6BE1D400B0DD19 /* TabHeaderView.swift */; };
 		3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF8A2A6BE5D400B0DD19 /* NotesView.swift */; };
+		3FCBDF902A6BEB0E00B0DD19 /* SWComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF8F2A6BEB0E00B0DD19 /* SWComputerView.swift */; };
+		3FCBDF922A6BED1500B0DD19 /* SWScrubberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF912A6BED1500B0DD19 /* SWScrubberView.swift */; };
+		3FCBDF942A6BEE6800B0DD19 /* SWCounterLungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF932A6BEE6800B0DD19 /* SWCounterLungView.swift */; };
+		3FCBDF962A6BF1BC00B0DD19 /* SWOxygenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF952A6BF1BC00B0DD19 /* SWOxygenView.swift */; };
+		3FCBDF982A6BF2EB00B0DD19 /* SWFlushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF972A6BF2EB00B0DD19 /* SWFlushView.swift */; };
+		3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF992A6BFDB800B0DD19 /* SWPositiveCheckView.swift */; };
+		3FCBDF9C2A6BFE2900B0DD19 /* SWTransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF9B2A6BFE2900B0DD19 /* SWTransportView.swift */; };
+		3FCBDF9E2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF9D2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift */; };
+		3FCBDFA02A6C014200B0DD19 /* SWLoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF9F2A6C014200B0DD19 /* SWLoopView.swift */; };
+		3FCBDFA22A6C01A200B0DD19 /* SWNegativeCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFA12A6C01A200B0DD19 /* SWNegativeCheckView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +55,16 @@
 		3FCBDF862A6BDFAA00B0DD19 /* BuildHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildHistoryView.swift; sourceTree = "<group>"; };
 		3FCBDF882A6BE1D400B0DD19 /* TabHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderView.swift; sourceTree = "<group>"; };
 		3FCBDF8A2A6BE5D400B0DD19 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		3FCBDF8F2A6BEB0E00B0DD19 /* SWComputerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWComputerView.swift; sourceTree = "<group>"; };
+		3FCBDF912A6BED1500B0DD19 /* SWScrubberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWScrubberView.swift; sourceTree = "<group>"; };
+		3FCBDF932A6BEE6800B0DD19 /* SWCounterLungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCounterLungView.swift; sourceTree = "<group>"; };
+		3FCBDF952A6BF1BC00B0DD19 /* SWOxygenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWOxygenView.swift; sourceTree = "<group>"; };
+		3FCBDF972A6BF2EB00B0DD19 /* SWFlushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFlushView.swift; sourceTree = "<group>"; };
+		3FCBDF992A6BFDB800B0DD19 /* SWPositiveCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPositiveCheckView.swift; sourceTree = "<group>"; };
+		3FCBDF9B2A6BFE2900B0DD19 /* SWTransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTransportView.swift; sourceTree = "<group>"; };
+		3FCBDF9D2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWChecklistSummaryView.swift; sourceTree = "<group>"; };
+		3FCBDF9F2A6C014200B0DD19 /* SWLoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLoopView.swift; sourceTree = "<group>"; };
+		3FCBDFA12A6C01A200B0DD19 /* SWNegativeCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNegativeCheckView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +117,7 @@
 		3FCBDF672A6BCA2400B0DD19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3FCBDF8C2A6BEA9E00B0DD19 /* CCRSelections */,
 				3FCBDF7D2A6BD85F00B0DD19 /* Home */,
 				3FCBDF842A6BDF7000B0DD19 /* BuildHistory */,
 				3FCBDF852A6BDF8000B0DD19 /* Notes */,
@@ -194,6 +215,39 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
+		3FCBDF8C2A6BEA9E00B0DD19 /* CCRSelections */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDF8E2A6BEAD400B0DD19 /* Pelagian */,
+				3FCBDF8D2A6BEAC800B0DD19 /* Sidewinder */,
+			);
+			path = CCRSelections;
+			sourceTree = "<group>";
+		};
+		3FCBDF8D2A6BEAC800B0DD19 /* Sidewinder */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDF8F2A6BEB0E00B0DD19 /* SWComputerView.swift */,
+				3FCBDF912A6BED1500B0DD19 /* SWScrubberView.swift */,
+				3FCBDF932A6BEE6800B0DD19 /* SWCounterLungView.swift */,
+				3FCBDF9F2A6C014200B0DD19 /* SWLoopView.swift */,
+				3FCBDFA12A6C01A200B0DD19 /* SWNegativeCheckView.swift */,
+				3FCBDF952A6BF1BC00B0DD19 /* SWOxygenView.swift */,
+				3FCBDF972A6BF2EB00B0DD19 /* SWFlushView.swift */,
+				3FCBDF992A6BFDB800B0DD19 /* SWPositiveCheckView.swift */,
+				3FCBDF9B2A6BFE2900B0DD19 /* SWTransportView.swift */,
+				3FCBDF9D2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift */,
+			);
+			path = Sidewinder;
+			sourceTree = "<group>";
+		};
+		3FCBDF8E2A6BEAD400B0DD19 /* Pelagian */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pelagian;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,19 +319,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FCBDF5C2A6BCA1900B0DD19 /* ContentView.swift in Sources */,
+				3FCBDF942A6BEE6800B0DD19 /* SWCounterLungView.swift in Sources */,
 				3FCBDF7C2A6BD78200B0DD19 /* CompleteSignUpView.swift in Sources */,
 				3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */,
+				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
 				3FCBDF832A6BDB1A00B0DD19 /* RoundedShapeView.swift in Sources */,
 				3FCBDF872A6BDFAA00B0DD19 /* BuildHistoryView.swift in Sources */,
 				3FCBDF742A6BCCA200B0DD19 /* TextFieldModifier.swift in Sources */,
 				3FCBDF812A6BDAE300B0DD19 /* AuthHeaderView.swift in Sources */,
+				3FCBDF902A6BEB0E00B0DD19 /* SWComputerView.swift in Sources */,
+				3FCBDF922A6BED1500B0DD19 /* SWScrubberView.swift in Sources */,
 				3FCBDF7F2A6BD87100B0DD19 /* HomeView.swift in Sources */,
+				3FCBDF982A6BF2EB00B0DD19 /* SWFlushView.swift in Sources */,
 				3FCBDF5A2A6BCA1900B0DD19 /* CCRChecklistApp.swift in Sources */,
 				3FCBDF762A6BD6C300B0DD19 /* AddEmailView.swift in Sources */,
+				3FCBDF962A6BF1BC00B0DD19 /* SWOxygenView.swift in Sources */,
 				3FCBDF712A6BCC5400B0DD19 /* LoginView.swift in Sources */,
 				3FCBDF7A2A6BD74900B0DD19 /* CreatePasswordView.swift in Sources */,
+				3FCBDFA02A6C014200B0DD19 /* SWLoopView.swift in Sources */,
+				3FCBDF9E2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift in Sources */,
 				3FCBDF782A6BD70F00B0DD19 /* CreateUsernameView.swift in Sources */,
 				3FCBDF6D2A6BCAEA00B0DD19 /* MainTabView.swift in Sources */,
+				3FCBDF9C2A6BFE2900B0DD19 /* SWTransportView.swift in Sources */,
+				3FCBDFA22A6C01A200B0DD19 /* SWNegativeCheckView.swift in Sources */,
 				3FCBDF892A6BE1D400B0DD19 /* TabHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
