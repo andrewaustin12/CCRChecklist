@@ -11,7 +11,7 @@ struct SWScrubberView: View {
     var body: some View {
         VStack {
             HStack {
-                TabHeaderView(title1: "Kiss SideWinder Checklist")
+                TabHeaderView(title1: "Kiss Sidewinder Checklist")
             }
             .ignoresSafeArea()
             

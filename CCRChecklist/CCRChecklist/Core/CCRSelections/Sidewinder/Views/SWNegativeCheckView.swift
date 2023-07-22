@@ -11,7 +11,7 @@ struct SWNegativeCheckView: View {
     var body: some View {
         VStack {
             HStack {
-                TabHeaderView(title1: "KISS SideWinder Checklist")
+                TabHeaderView(title1: "KISS Sidewinder Checklist")
             
             }
             .ignoresSafeArea()
@@ -26,15 +26,18 @@ struct SWNegativeCheckView: View {
                     .padding(.leading)
                 
                 List {
-                    Text("Inpect Mouth Piece for holes and tears")
+                    Section {
+
+                        Text("Preform Negative check on air")
+                    }
                     
-                    Text("Preform Mushroom Valve Check")
+                    Section {
+                        Text("The Millivolts should decend and hold. Pick a cell and record millivolt. Wait 5 minutes and compare starting millivolts to new value")
+                    }
+                        
                     
-                    Text("Inspect and lube O-Rings")
                     
-                    Text("Install loop to towers (Verify EXHALE goes to the RIGHT tower)")
                     
-                    Text("Verify bayonets are closed")
                 }
             }
             Spacer()

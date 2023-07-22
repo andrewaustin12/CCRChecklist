@@ -30,9 +30,8 @@ struct SWComputerView: View {
 
                     Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
 
-                    Text("Note millivolts and fill columns 1 & 2 of linearity sheet")
+                    Text("Note millivolts from each cell at ambient air pressure (.21) and fill columns 1 & 2 of linearity sheet")
 
-                    Text("Program all gasses(CC&BO) in primary and backup computers")
 
                 }
                 

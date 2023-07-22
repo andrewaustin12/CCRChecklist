@@ -42,6 +42,7 @@
 		3FCBDFB22A6C461B00B0DD19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB12A6C461B00B0DD19 /* GoogleService-Info.plist */; };
 		3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */; };
 		3FCBDFB72A6C500900B0DD19 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB62A6C500900B0DD19 /* WarningView.swift */; };
+		3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB92A6C5F4300B0DD19 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		3FCBDFB12A6C461B00B0DD19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		3FCBDFB62A6C500900B0DD19 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
+		3FCBDFB92A6C5F4300B0DD19 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +183,9 @@
 		3FCBDF6E2A6BCC2F00B0DD19 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				3FCBDFAE2A6C42E100B0DD19 /* Service */,
 				3FCBDF6F2A6BCC3900B0DD19 /* Views */,
+				3FCBDFB82A6C5F1F00B0DD19 /* ViewModel */,
+				3FCBDFAE2A6C42E100B0DD19 /* Service */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -300,6 +303,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3FCBDFB82A6C5F1F00B0DD19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDFB92A6C5F4300B0DD19 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,6 +394,7 @@
 				3FCBDF5C2A6BCA1900B0DD19 /* ContentView.swift in Sources */,
 				3FCBDF942A6BEE6800B0DD19 /* SWCounterLungView.swift in Sources */,
 				3FCBDF7C2A6BD78200B0DD19 /* CompleteSignUpView.swift in Sources */,
+				3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */,
 				3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */,
 				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
 				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,

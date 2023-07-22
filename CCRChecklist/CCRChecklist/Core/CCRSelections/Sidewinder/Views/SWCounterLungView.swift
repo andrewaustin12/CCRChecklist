@@ -11,7 +11,7 @@ struct SWCounterLungView: View {
     var body: some View {
         VStack {
             HStack {
-                TabHeaderView(title1: "KISS SideWinder Checklist")
+                TabHeaderView(title1: "KISS Sidewinder Checklist")
             
             }
             .ignoresSafeArea()

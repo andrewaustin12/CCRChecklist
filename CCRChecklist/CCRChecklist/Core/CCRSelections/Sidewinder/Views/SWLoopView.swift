@@ -11,7 +11,7 @@ struct SWLoopView: View {
     var body: some View {
         VStack {
             HStack {
-                TabHeaderView(title1: "KISS SideWinder Checklist")
+                TabHeaderView(title1: "KISS Sidewinder Checklist")
             
             }
             .ignoresSafeArea()
@@ -37,6 +37,7 @@ struct SWLoopView: View {
                     Text("Verify bayonets are closed")
                 }
             }
+            
             Spacer()
             
             NavigationLink{
