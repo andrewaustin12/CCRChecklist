@@ -34,6 +34,10 @@
 		3FCBDF9E2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF9D2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift */; };
 		3FCBDFA02A6C014200B0DD19 /* SWLoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF9F2A6C014200B0DD19 /* SWLoopView.swift */; };
 		3FCBDFA22A6C01A200B0DD19 /* SWNegativeCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFA12A6C01A200B0DD19 /* SWNegativeCheckView.swift */; };
+		3FCBDFA72A6C3F3A00B0DD19 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFA62A6C3F3A00B0DD19 /* FirebaseAuth */; };
+		3FCBDFA92A6C3F3A00B0DD19 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFA82A6C3F3A00B0DD19 /* FirebaseFirestore */; };
+		3FCBDFAB2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFAA2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift */; };
+		3FCBDFAD2A6C3F3A00B0DD19 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFAC2A6C3F3A00B0DD19 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCBDFA72A6C3F3A00B0DD19 /* FirebaseAuth in Frameworks */,
+				3FCBDFAD2A6C3F3A00B0DD19 /* FirebaseStorage in Frameworks */,
+				3FCBDFA92A6C3F3A00B0DD19 /* FirebaseFirestore in Frameworks */,
+				3FCBDFAB2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +107,6 @@
 			children = (
 				3FCBDF682A6BCA4F00B0DD19 /* App */,
 				3FCBDF672A6BCA2400B0DD19 /* Core */,
-				3FCBDF592A6BCA1900B0DD19 /* CCRChecklistApp.swift */,
 				3FCBDF5D2A6BCA1A00B0DD19 /* Assets.xcassets */,
 				3FCBDF5F2A6BCA1A00B0DD19 /* Preview Content */,
 			);
@@ -132,6 +139,7 @@
 		3FCBDF682A6BCA4F00B0DD19 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3FCBDF592A6BCA1900B0DD19 /* CCRChecklistApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -227,6 +235,29 @@
 		3FCBDF8D2A6BEAC800B0DD19 /* Sidewinder */ = {
 			isa = PBXGroup;
 			children = (
+				3FCBDFA42A6C3A6800B0DD19 /* Views */,
+				3FCBDFA32A6C3A5700B0DD19 /* ViewModels */,
+			);
+			path = Sidewinder;
+			sourceTree = "<group>";
+		};
+		3FCBDF8E2A6BEAD400B0DD19 /* Pelagian */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pelagian;
+			sourceTree = "<group>";
+		};
+		3FCBDFA32A6C3A5700B0DD19 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3FCBDFA42A6C3A6800B0DD19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				3FCBDF8F2A6BEB0E00B0DD19 /* SWComputerView.swift */,
 				3FCBDF912A6BED1500B0DD19 /* SWScrubberView.swift */,
 				3FCBDF932A6BEE6800B0DD19 /* SWCounterLungView.swift */,
@@ -238,14 +269,7 @@
 				3FCBDF9B2A6BFE2900B0DD19 /* SWTransportView.swift */,
 				3FCBDF9D2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift */,
 			);
-			path = Sidewinder;
-			sourceTree = "<group>";
-		};
-		3FCBDF8E2A6BEAD400B0DD19 /* Pelagian */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pelagian;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +288,12 @@
 			dependencies = (
 			);
 			name = CCRChecklist;
+			packageProductDependencies = (
+				3FCBDFA62A6C3F3A00B0DD19 /* FirebaseAuth */,
+				3FCBDFA82A6C3F3A00B0DD19 /* FirebaseFirestore */,
+				3FCBDFAA2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift */,
+				3FCBDFAC2A6C3F3A00B0DD19 /* FirebaseStorage */,
+			);
 			productName = CCRChecklist;
 			productReference = 3FCBDF562A6BCA1900B0DD19 /* CCRChecklist.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +322,9 @@
 				Base,
 			);
 			mainGroup = 3FCBDF4D2A6BCA1900B0DD19;
+			packageReferences = (
+				3FCBDFA52A6C3F3A00B0DD19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3FCBDF572A6BCA1900B0DD19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -541,6 +574,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FCBDFA52A6C3F3A00B0DD19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FCBDFA62A6C3F3A00B0DD19 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FCBDFA52A6C3F3A00B0DD19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3FCBDFA82A6C3F3A00B0DD19 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FCBDFA52A6C3F3A00B0DD19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3FCBDFAA2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FCBDFA52A6C3F3A00B0DD19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		3FCBDFAC2A6C3F3A00B0DD19 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FCBDFA52A6C3F3A00B0DD19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3FCBDF4E2A6BCA1900B0DD19 /* Project object */;
 }

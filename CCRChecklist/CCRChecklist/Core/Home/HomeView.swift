@@ -20,8 +20,12 @@ struct HomeView: View {
                 Spacer()
                 
                 VStack {
-                    Button {
-                        print("Sidewinder Selected")
+                    
+                    // This can be refactored to loop through and array of selectable buttons and make a button component
+                    
+                    NavigationLink {
+                        SWComputerView()
+                            .navigationBarBackButtonHidden()
                     } label: {
                         Text("Sidewinder")
                             .font(.title)
@@ -43,11 +47,11 @@ struct HomeView: View {
                             .background(Color(.systemBlue))
                             .cornerRadius(8)
                     }
-                    NavigationLink {
-                        SWComputerView()
-                            .navigationBarBackButtonHidden()
+                    
+                    Button {
+                        print("JJ CCR")
                     } label: {
-                        Text("Sidewinder 2")
+                        Text("JJ CCR")
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)

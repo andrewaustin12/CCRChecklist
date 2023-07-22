@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SWComputerView: View {
+    
+    
     var body: some View {
         VStack {
             HStack {
@@ -23,14 +25,19 @@ struct SWComputerView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
+                
                 List {
+
                     Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
-                    
+
                     Text("Note millivolts and fill columns 1 & 2 of linearity sheet")
-                    
+
                     Text("Program all gasses(CC&BO) in primary and backup computers")
+
                 }
+                
             }
+            
             Spacer()
             
             
