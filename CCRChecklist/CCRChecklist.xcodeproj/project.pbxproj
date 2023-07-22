@@ -38,6 +38,10 @@
 		3FCBDFA92A6C3F3A00B0DD19 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFA82A6C3F3A00B0DD19 /* FirebaseFirestore */; };
 		3FCBDFAB2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFAA2A6C3F3A00B0DD19 /* FirebaseFirestoreSwift */; };
 		3FCBDFAD2A6C3F3A00B0DD19 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCBDFAC2A6C3F3A00B0DD19 /* FirebaseStorage */; };
+		3FCBDFB02A6C431C00B0DD19 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFAF2A6C431C00B0DD19 /* AuthService.swift */; };
+		3FCBDFB22A6C461B00B0DD19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB12A6C461B00B0DD19 /* GoogleService-Info.plist */; };
+		3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */; };
+		3FCBDFB72A6C500900B0DD19 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB62A6C500900B0DD19 /* WarningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,10 @@
 		3FCBDF9D2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWChecklistSummaryView.swift; sourceTree = "<group>"; };
 		3FCBDF9F2A6C014200B0DD19 /* SWLoopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLoopView.swift; sourceTree = "<group>"; };
 		3FCBDFA12A6C01A200B0DD19 /* SWNegativeCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWNegativeCheckView.swift; sourceTree = "<group>"; };
+		3FCBDFAF2A6C431C00B0DD19 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		3FCBDFB12A6C461B00B0DD19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		3FCBDFB62A6C500900B0DD19 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 				3FCBDF682A6BCA4F00B0DD19 /* App */,
 				3FCBDF672A6BCA2400B0DD19 /* Core */,
 				3FCBDF5D2A6BCA1A00B0DD19 /* Assets.xcassets */,
+				3FCBDFB12A6C461B00B0DD19 /* GoogleService-Info.plist */,
 				3FCBDF5F2A6BCA1A00B0DD19 /* Preview Content */,
 			);
 			path = CCRChecklist;
@@ -147,6 +156,7 @@
 		3FCBDF692A6BCA6A00B0DD19 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				3FCBDFB32A6C465D00B0DD19 /* ViewModel */,
 				3FCBDF6A2A6BCA9900B0DD19 /* View */,
 			);
 			path = Root;
@@ -171,6 +181,7 @@
 		3FCBDF6E2A6BCC2F00B0DD19 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				3FCBDFAE2A6C42E100B0DD19 /* Service */,
 				3FCBDF6F2A6BCC3900B0DD19 /* Views */,
 			);
 			path = Authentication;
@@ -195,6 +206,7 @@
 				3FCBDF802A6BDAE300B0DD19 /* AuthHeaderView.swift */,
 				3FCBDF882A6BE1D400B0DD19 /* TabHeaderView.swift */,
 				3FCBDF822A6BDB1A00B0DD19 /* RoundedShapeView.swift */,
+				3FCBDFB62A6C500900B0DD19 /* WarningView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -272,6 +284,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3FCBDFAE2A6C42E100B0DD19 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDFAF2A6C431C00B0DD19 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3FCBDFB32A6C465D00B0DD19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +369,7 @@
 			files = (
 				3FCBDF612A6BCA1A00B0DD19 /* Preview Assets.xcassets in Resources */,
 				3FCBDF5E2A6BCA1A00B0DD19 /* Assets.xcassets in Resources */,
+				3FCBDFB22A6C461B00B0DD19 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +385,7 @@
 				3FCBDF7C2A6BD78200B0DD19 /* CompleteSignUpView.swift in Sources */,
 				3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */,
 				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
+				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,
 				3FCBDF832A6BDB1A00B0DD19 /* RoundedShapeView.swift in Sources */,
 				3FCBDF872A6BDFAA00B0DD19 /* BuildHistoryView.swift in Sources */,
 				3FCBDF742A6BCCA200B0DD19 /* TextFieldModifier.swift in Sources */,
@@ -370,10 +400,12 @@
 				3FCBDF712A6BCC5400B0DD19 /* LoginView.swift in Sources */,
 				3FCBDF7A2A6BD74900B0DD19 /* CreatePasswordView.swift in Sources */,
 				3FCBDFA02A6C014200B0DD19 /* SWLoopView.swift in Sources */,
+				3FCBDFB02A6C431C00B0DD19 /* AuthService.swift in Sources */,
 				3FCBDF9E2A6BFF2300B0DD19 /* SWChecklistSummaryView.swift in Sources */,
 				3FCBDF782A6BD70F00B0DD19 /* CreateUsernameView.swift in Sources */,
 				3FCBDF6D2A6BCAEA00B0DD19 /* MainTabView.swift in Sources */,
 				3FCBDF9C2A6BFE2900B0DD19 /* SWTransportView.swift in Sources */,
+				3FCBDFB72A6C500900B0DD19 /* WarningView.swift in Sources */,
 				3FCBDFA22A6C01A200B0DD19 /* SWNegativeCheckView.swift in Sources */,
 				3FCBDF892A6BE1D400B0DD19 /* TabHeaderView.swift in Sources */,
 			);

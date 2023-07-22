@@ -23,7 +23,7 @@ struct CCRChecklistApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            WarningView()
         }
     }
 }

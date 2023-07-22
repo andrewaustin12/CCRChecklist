@@ -16,17 +16,17 @@ struct LoginView: View {
 
             VStack {
                 
-                AuthHeaderView(title1: "Hello.", title2: "Welcome Back.")
+                AuthHeaderView(title1: "The CCR", title2: "Checklist")
                 
                 VStack {
                     
 
                     
                     // logo image
-                    Image("instagram-logo-black")
+                    Image("")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 220, height: 100)
+                        .frame(width: 300, height: 100)
                     
                     // text fields
                     VStack {
@@ -57,7 +57,7 @@ struct LoginView: View {
                         print("Login")
                     } label: {
                         Text("Login")
-                            .font(.subheadline)
+                            .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .frame(width: 360, height: 44)
@@ -70,6 +70,7 @@ struct LoginView: View {
                     
                     
                     Spacer()
+    
                     
                     Divider()
                     
