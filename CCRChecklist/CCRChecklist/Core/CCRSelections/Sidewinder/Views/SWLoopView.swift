@@ -12,7 +12,7 @@ struct SWLoopView: View {
         VStack {
             HStack {
                 TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
+                
             }
             .ignoresSafeArea()
             
@@ -40,18 +40,36 @@ struct SWLoopView: View {
             
             Spacer()
             
-            NavigationLink{
-                SWNegativeCheckView()
-            } label: {
-                Text("Next")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .cornerRadius(8)
+            HStack {
+                NavigationLink{
+                    SWCounterLungView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Back")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemGray))
+                        .cornerRadius(8)
+                }
+                
+                
+                NavigationLink{
+                    SWNegativeCheckView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Next")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(8)
+                }
             }
-        }    }
+        }
+    }
 }
 
 struct SWLoopView_Previews: PreviewProvider {

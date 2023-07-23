@@ -39,16 +39,33 @@ struct SWTransportView: View {
             }
             Spacer()
             
-            NavigationLink{
-                SWChecklistSummaryView()
-            } label: {
-                Text("Next")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .cornerRadius(8)
+            HStack {
+                NavigationLink{
+                    SWPositiveCheckView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Back")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemGray))
+                        .cornerRadius(8)
+                }
+                
+                
+                NavigationLink{
+                    SWChecklistSummaryView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Next")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(8)
+                }
             }
         }
     }

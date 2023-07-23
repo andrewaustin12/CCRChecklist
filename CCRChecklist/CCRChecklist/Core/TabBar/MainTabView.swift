@@ -35,6 +35,13 @@ struct MainTabView: View {
                 .tabItem{
                     Image(systemName: "plus.square")
                 }.tag(2)
+            CurrentUserProfileView()
+                .onAppear{
+                    selectedIndex = 3
+                }
+                .tabItem{
+                    Image(systemName: "person")
+                }.tag(3)
             
 //            CurrentUserProfileView(user: User.MOCK_USERS[0])
 //                .onAppear{

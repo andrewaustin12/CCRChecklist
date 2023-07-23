@@ -25,7 +25,7 @@ struct HomeView: View {
                     
                     NavigationLink {
                         SWComputerView()
-                            
+                            .navigationBarBackButtonHidden(true)
                     } label: {
                         Text("Sidewinder")
                             .font(.title)

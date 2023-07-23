@@ -43,6 +43,9 @@
 		3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */; };
 		3FCBDFB72A6C500900B0DD19 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB62A6C500900B0DD19 /* WarningView.swift */; };
 		3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFB92A6C5F4300B0DD19 /* RegistrationViewModel.swift */; };
+		3FCBDFBD2A6CB91600B0DD19 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFBC2A6CB91600B0DD19 /* CurrentUserProfileView.swift */; };
+		3FCBDFBF2A6CBCB800B0DD19 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFBE2A6CBCB800B0DD19 /* LoginViewModel.swift */; };
+		3FCBDFC72A6CC6EC00B0DD19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDFC62A6CC6EC00B0DD19 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,9 @@
 		3FCBDFB42A6C46A200B0DD19 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		3FCBDFB62A6C500900B0DD19 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		3FCBDFB92A6C5F4300B0DD19 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		3FCBDFBC2A6CB91600B0DD19 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
+		3FCBDFBE2A6CBCB800B0DD19 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3FCBDFC62A6CC6EC00B0DD19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 			children = (
 				3FCBDF682A6BCA4F00B0DD19 /* App */,
 				3FCBDF672A6BCA2400B0DD19 /* Core */,
+				3FCBDFC52A6CC6E000B0DD19 /* Model */,
 				3FCBDF5D2A6BCA1A00B0DD19 /* Assets.xcassets */,
 				3FCBDFB12A6C461B00B0DD19 /* GoogleService-Info.plist */,
 				3FCBDF5F2A6BCA1A00B0DD19 /* Preview Content */,
@@ -135,14 +142,15 @@
 		3FCBDF672A6BCA2400B0DD19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3FCBDF8C2A6BEA9E00B0DD19 /* CCRSelections */,
-				3FCBDF7D2A6BD85F00B0DD19 /* Home */,
-				3FCBDF842A6BDF7000B0DD19 /* BuildHistory */,
-				3FCBDF852A6BDF8000B0DD19 /* Notes */,
-				3FCBDF722A6BCC8200B0DD19 /* Components */,
 				3FCBDF6E2A6BCC2F00B0DD19 /* Authentication */,
-				3FCBDF6B2A6BCAC800B0DD19 /* TabBar */,
+				3FCBDF842A6BDF7000B0DD19 /* BuildHistory */,
+				3FCBDF8C2A6BEA9E00B0DD19 /* CCRSelections */,
+				3FCBDF722A6BCC8200B0DD19 /* Components */,
+				3FCBDF7D2A6BD85F00B0DD19 /* Home */,
+				3FCBDF852A6BDF8000B0DD19 /* Notes */,
+				3FCBDFBB2A6CB90300B0DD19 /* Profile */,
 				3FCBDF692A6BCA6A00B0DD19 /* Root */,
+				3FCBDF6B2A6BCAC800B0DD19 /* TabBar */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -307,8 +315,25 @@
 			isa = PBXGroup;
 			children = (
 				3FCBDFB92A6C5F4300B0DD19 /* RegistrationViewModel.swift */,
+				3FCBDFBE2A6CBCB800B0DD19 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3FCBDFBB2A6CB90300B0DD19 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDFBC2A6CB91600B0DD19 /* CurrentUserProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3FCBDFC52A6CC6E000B0DD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBDFC62A6CC6EC00B0DD19 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +420,7 @@
 				3FCBDF942A6BEE6800B0DD19 /* SWCounterLungView.swift in Sources */,
 				3FCBDF7C2A6BD78200B0DD19 /* CompleteSignUpView.swift in Sources */,
 				3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */,
+				3FCBDFC72A6CC6EC00B0DD19 /* User.swift in Sources */,
 				3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */,
 				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
 				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,
@@ -408,6 +434,8 @@
 				3FCBDF982A6BF2EB00B0DD19 /* SWFlushView.swift in Sources */,
 				3FCBDF5A2A6BCA1900B0DD19 /* CCRChecklistApp.swift in Sources */,
 				3FCBDF762A6BD6C300B0DD19 /* AddEmailView.swift in Sources */,
+				3FCBDFBF2A6CBCB800B0DD19 /* LoginViewModel.swift in Sources */,
+				3FCBDFBD2A6CB91600B0DD19 /* CurrentUserProfileView.swift in Sources */,
 				3FCBDF962A6BF1BC00B0DD19 /* SWOxygenView.swift in Sources */,
 				3FCBDF712A6BCC5400B0DD19 /* LoginView.swift in Sources */,
 				3FCBDF7A2A6BD74900B0DD19 /* CreatePasswordView.swift in Sources */,

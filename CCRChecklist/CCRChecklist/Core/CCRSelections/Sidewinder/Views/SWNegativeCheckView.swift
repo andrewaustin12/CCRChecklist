@@ -42,16 +42,33 @@ struct SWNegativeCheckView: View {
             }
             Spacer()
             
-            NavigationLink{
-                SWOxygenView()
-            } label: {
-                Text("Next")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .cornerRadius(8)
+            HStack {
+                NavigationLink{
+                    SWLoopView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Back")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemGray))
+                        .cornerRadius(8)
+                }
+                
+                
+                NavigationLink{
+                    SWOxygenView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Next")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(8)
+                }
             }
         }
     }

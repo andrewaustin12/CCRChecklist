@@ -34,16 +34,34 @@ struct SWChecklistSummaryView: View {
             }
             Spacer()
             
-            NavigationLink{
-                HomeView()
-            } label: {
-                Text("Complete")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .cornerRadius(8)
+            HStack {
+                NavigationLink{
+                    SWTransportView()
+                        .navigationBarBackButtonHidden(true)
+                        .transition(.move(edge: .leading))
+                } label: {
+                    Text("Back")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemGray))
+                        .cornerRadius(8)
+                }
+                
+                
+                NavigationLink{
+                    HomeView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Complete")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(8)
+                }
             }
         }
     }

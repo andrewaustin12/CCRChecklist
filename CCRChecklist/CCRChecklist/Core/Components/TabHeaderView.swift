@@ -28,7 +28,9 @@ struct TabHeaderView: View {
         .background(Color(.systemBlue))
         .foregroundColor(.white)
         .clipShape(RoundedShape(corners: [.bottomRight]))
+        
     }
+    
 }
 
 struct TabHeaderView_Previews: PreviewProvider {

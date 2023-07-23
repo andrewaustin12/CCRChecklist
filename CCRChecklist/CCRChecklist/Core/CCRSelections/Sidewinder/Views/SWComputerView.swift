@@ -39,17 +39,33 @@ struct SWComputerView: View {
             
             Spacer()
             
-            
-            NavigationLink{
-                SWScrubberView()
-            } label: {
-                Text("Next")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemBlue))
-                    .cornerRadius(8)
+            HStack {
+                NavigationLink{
+                    HomeView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Back")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemGray))
+                        .cornerRadius(8)
+                }
+                
+                
+                NavigationLink{
+                    SWScrubberView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Next")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 180, height: 44)
+                        .background(Color(.systemBlue))
+                        .cornerRadius(8)
+                }
             }
         }
     }
