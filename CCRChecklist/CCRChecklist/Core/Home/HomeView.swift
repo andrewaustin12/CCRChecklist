@@ -9,15 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationStack {
+        NavigationView {
             
             VStack {
                 HStack {
                     TabHeaderView(title1: "Select a Unit")
                 }
                 .ignoresSafeArea()
-                
-                Spacer()
                 
                 VStack {
                     
@@ -36,8 +34,9 @@ struct HomeView: View {
                             .cornerRadius(8)
                     }
                     
-                    Button {
-                        print("Pelagian Selected")
+                    NavigationLink {
+                        PelagianTanksAnalyzedView()
+                            .navigationBarBackButtonHidden(true)
                     } label: {
                         Text("Pelagian")
                             .font(.title)
@@ -62,9 +61,9 @@ struct HomeView: View {
 
                     Spacer()
                 }
+                
             }
         }
-
     }
 }
 

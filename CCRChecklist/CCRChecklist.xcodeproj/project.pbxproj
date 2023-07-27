@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7B48182A72627A00C9479B /* PelagianTanksAnalyzedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48172A72627A00C9479B /* PelagianTanksAnalyzedView.swift */; };
+		3F7B481A2A7267C500C9479B /* PelagianScrubbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48192A7267C500C9479B /* PelagianScrubbersView.swift */; };
+		3F7B481C2A7268F900C9479B /* PelagianAssemblyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B481B2A7268F900C9479B /* PelagianAssemblyView.swift */; };
+		3F7B481E2A726A0000C9479B /* PelagianGasAndRegsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B481D2A726A0000C9479B /* PelagianGasAndRegsView.swift */; };
+		3F7B48202A726B6F00C9479B /* PelagianPressureTestAndPreBreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B481F2A726B6F00C9479B /* PelagianPressureTestAndPreBreatheView.swift */; };
+		3F7B48222A726C4D00C9479B /* PelagianSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48212A726C4D00C9479B /* PelagianSummaryView.swift */; };
+		3FA8054E2A6F9F6100452E2E /* SidewinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */; };
 		3FCBDF5A2A6BCA1900B0DD19 /* CCRChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF592A6BCA1900B0DD19 /* CCRChecklistApp.swift */; };
 		3FCBDF5C2A6BCA1900B0DD19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF5B2A6BCA1900B0DD19 /* ContentView.swift */; };
 		3FCBDF5E2A6BCA1A00B0DD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FCBDF5D2A6BCA1A00B0DD19 /* Assets.xcassets */; };
@@ -49,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F7B48172A72627A00C9479B /* PelagianTanksAnalyzedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianTanksAnalyzedView.swift; sourceTree = "<group>"; };
+		3F7B48192A7267C500C9479B /* PelagianScrubbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianScrubbersView.swift; sourceTree = "<group>"; };
+		3F7B481B2A7268F900C9479B /* PelagianAssemblyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianAssemblyView.swift; sourceTree = "<group>"; };
+		3F7B481D2A726A0000C9479B /* PelagianGasAndRegsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianGasAndRegsView.swift; sourceTree = "<group>"; };
+		3F7B481F2A726B6F00C9479B /* PelagianPressureTestAndPreBreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianPressureTestAndPreBreatheView.swift; sourceTree = "<group>"; };
+		3F7B48212A726C4D00C9479B /* PelagianSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagianSummaryView.swift; sourceTree = "<group>"; };
+		3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidewinderModel.swift; sourceTree = "<group>"; };
 		3FCBDF562A6BCA1900B0DD19 /* CCRChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCRChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCBDF592A6BCA1900B0DD19 /* CCRChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCRChecklistApp.swift; sourceTree = "<group>"; };
 		3FCBDF5B2A6BCA1900B0DD19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +116,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F7B48162A72622400C9479B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B48172A72627A00C9479B /* PelagianTanksAnalyzedView.swift */,
+				3F7B48192A7267C500C9479B /* PelagianScrubbersView.swift */,
+				3F7B481B2A7268F900C9479B /* PelagianAssemblyView.swift */,
+				3F7B481D2A726A0000C9479B /* PelagianGasAndRegsView.swift */,
+				3F7B481F2A726B6F00C9479B /* PelagianPressureTestAndPreBreatheView.swift */,
+				3F7B48212A726C4D00C9479B /* PelagianSummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3FCBDF4D2A6BCA1900B0DD19 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +294,7 @@
 		3FCBDF8E2A6BEAD400B0DD19 /* Pelagian */ = {
 			isa = PBXGroup;
 			children = (
+				3F7B48162A72622400C9479B /* Views */,
 			);
 			path = Pelagian;
 			sourceTree = "<group>";
@@ -332,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				3FCBDFC62A6CC6EC00B0DD19 /* User.swift */,
+				3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,9 +447,11 @@
 			files = (
 				3FCBDF5C2A6BCA1900B0DD19 /* ContentView.swift in Sources */,
 				3FCBDF942A6BEE6800B0DD19 /* SWCounterLungView.swift in Sources */,
+				3F7B48182A72627A00C9479B /* PelagianTanksAnalyzedView.swift in Sources */,
 				3FCBDF7C2A6BD78200B0DD19 /* CompleteSignUpView.swift in Sources */,
 				3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */,
 				3FCBDFC72A6CC6EC00B0DD19 /* User.swift in Sources */,
+				3FA8054E2A6F9F6100452E2E /* SidewinderModel.swift in Sources */,
 				3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */,
 				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
 				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,
@@ -430,10 +461,15 @@
 				3FCBDF812A6BDAE300B0DD19 /* AuthHeaderView.swift in Sources */,
 				3FCBDF902A6BEB0E00B0DD19 /* SWComputerView.swift in Sources */,
 				3FCBDF922A6BED1500B0DD19 /* SWScrubberView.swift in Sources */,
+				3F7B481C2A7268F900C9479B /* PelagianAssemblyView.swift in Sources */,
 				3FCBDF7F2A6BD87100B0DD19 /* HomeView.swift in Sources */,
 				3FCBDF982A6BF2EB00B0DD19 /* SWFlushView.swift in Sources */,
 				3FCBDF5A2A6BCA1900B0DD19 /* CCRChecklistApp.swift in Sources */,
 				3FCBDF762A6BD6C300B0DD19 /* AddEmailView.swift in Sources */,
+				3F7B48202A726B6F00C9479B /* PelagianPressureTestAndPreBreatheView.swift in Sources */,
+				3F7B481A2A7267C500C9479B /* PelagianScrubbersView.swift in Sources */,
+				3F7B48222A726C4D00C9479B /* PelagianSummaryView.swift in Sources */,
+				3F7B481E2A726A0000C9479B /* PelagianGasAndRegsView.swift in Sources */,
 				3FCBDFBF2A6CBCB800B0DD19 /* LoginViewModel.swift in Sources */,
 				3FCBDFBD2A6CB91600B0DD19 /* CurrentUserProfileView.swift in Sources */,
 				3FCBDF962A6BF1BC00B0DD19 /* SWOxygenView.swift in Sources */,

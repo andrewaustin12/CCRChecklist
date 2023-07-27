@@ -27,11 +27,11 @@ struct SWPositiveCheckView: View {
                 
                 List {
                     
-                    Text("Open mouthpiece slightly, flush with O2. Monitor cells for smooth and even increases")
+                    Text("Close DSV and OPV, flush with O2. Monitor cells for smooth and even increases until reaching over 1.00 ")
                     
                     Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
                     
-                    Text("Calibrate computer if necessary (make sure loop is at ambient pressure)")
+                    Text("Something here")
     
                 }
             }

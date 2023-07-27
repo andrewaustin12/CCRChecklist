@@ -17,7 +17,7 @@ struct MainTabView: View {
                     selectedIndex = 0
                 }
                 .tabItem{
-                    Image(systemName: "house")
+                    Image(systemName: "gearshape")
                 }.tag(0)
             
             BuildHistoryView()
@@ -25,7 +25,7 @@ struct MainTabView: View {
                     selectedIndex = 1
                 }
                 .tabItem{
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "folder.badge.gearshape")
                 }.tag(1)
             
             NotesView()
@@ -33,7 +33,7 @@ struct MainTabView: View {
                     selectedIndex = 2
                 }
                 .tabItem{
-                    Image(systemName: "plus.square")
+                    Image(systemName: "note.text")
                 }.tag(2)
             CurrentUserProfileView()
                 .onAppear{
@@ -52,6 +52,7 @@ struct MainTabView: View {
 //                }.tag(4)
         }
         .accentColor(.black)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

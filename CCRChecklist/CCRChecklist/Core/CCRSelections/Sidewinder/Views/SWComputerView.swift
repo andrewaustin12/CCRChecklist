@@ -9,23 +9,23 @@ import SwiftUI
 
 struct SWComputerView: View {
     
-    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "Kiss Sidewinder Checklist")
+            VStack {
+                TabHeaderView(title1: "KISS Sidewinder Checklist")
             }
             .ignoresSafeArea()
-            
+                        
             Spacer()
             
             VStack(alignment: .leading) {
                 Text("Computer")
+                    .padding(.top)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.leading)
-                
-                
+
+
                 List {
 
                     Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
@@ -34,40 +34,44 @@ struct SWComputerView: View {
 
 
                 }
-                
+
             }
+            
+
             
             Spacer()
             
             HStack {
-                NavigationLink{
-                    HomeView()
-                        .navigationBarBackButtonHidden(true)
-                } label: {
-                    Text("Back")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 180, height: 44)
-                        .background(Color(.systemGray))
-                        .cornerRadius(8)
-                }
+//                NavigationLink{
+//                    HomeView()
+////                        .navigationBarBackButtonHidden(true)
+//                } label: {
+//                    Text("Back")
+//                        .font(.title)
+//                        .fontWeight(.semibold)
+//                        .foregroundColor(.white)
+//                        .frame(width: 180, height: 44)
+//                        .background(Color(.systemGray))
+//                        .cornerRadius(8)
+//                }
                 
                 
                 NavigationLink{
                     SWScrubberView()
-                        .navigationBarBackButtonHidden(true)
+                        .accentColor(.white)
                 } label: {
                     Text("Next")
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .frame(width: 180, height: 44)
+                        .frame(width: 360, height: 44)
                         .background(Color(.systemBlue))
                         .cornerRadius(8)
                 }
             }
+            
         }
+        
     }
 }
 

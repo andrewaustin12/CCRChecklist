@@ -12,12 +12,15 @@ struct TabHeaderView: View {
 //    let title2: String
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
+            Spacer()
+            
             HStack { Spacer() }
             
             Text(title1)
                 .font(.largeTitle)
                 .fontWeight(.semibold)
+                .padding()
             
 //            Text(title2)
 //                .font(.largeTitle)
@@ -28,6 +31,7 @@ struct TabHeaderView: View {
         .background(Color(.systemBlue))
         .foregroundColor(.white)
         .clipShape(RoundedShape(corners: [.bottomRight]))
+        
         
     }
     
