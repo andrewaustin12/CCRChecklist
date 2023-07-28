@@ -16,23 +16,55 @@ struct CurrentUserProfileView: View {
 //    }
     
     var body: some View {
-        NavigationStack {
+        @State var email = ""
+        @State var password = ""
+        
+        VStack {
             HStack {
                 TabHeaderView(title1: "Profile")
             }
             .ignoresSafeArea()
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        AuthService.shared.signout()
-                    } label: {
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
+            
+            
+            VStack {
+                
+                Text("Hello, Andy!")
+                    .font(.title)
+                
+                HStack{
+                    Button("Edit") {
+                        print("edit email")
                     }
+                    
+                    TextField("Change your email", text: $email)
+                        .fontWeight(.semibold)
+                        .autocapitalization(.none)
+                        .modifier(TextFieldModifier())
+                    
                 }
+                .padding()
+                
+                HStack {
+                    Button("Edit") {
+                        print("edit password")
+                    }
+                    SecureField("Change your password", text: $password)
+                        .fontWeight(.semibold)
+                        .modifier(TextFieldModifier())
+                }
+                .padding()
+
             }
+            
             Spacer()
+            
+            VStack {
+                Button("Logout") {
+                        AuthService.shared.signout()
+                }
+                .modifier(PrimaryButtonModifier())
+            }
+            .padding()
         }
     }
 }

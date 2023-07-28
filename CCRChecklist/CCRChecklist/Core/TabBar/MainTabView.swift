@@ -17,7 +17,7 @@ struct MainTabView: View {
                     selectedIndex = 0
                 }
                 .tabItem{
-                    Image(systemName: "gearshape")
+                    Image(systemName: "house")
                 }.tag(0)
             
             BuildHistoryView()

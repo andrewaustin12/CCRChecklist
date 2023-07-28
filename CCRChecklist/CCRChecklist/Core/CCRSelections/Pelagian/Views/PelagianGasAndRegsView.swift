@@ -36,12 +36,10 @@ struct PelagianGasAndRegsView: View {
                 
                 HStack() {
                     Text("Enter 02")
-                    TextField("PP02",
-                              value: $o2Pressure,
-                              formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
-                    .frame(width: 80)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("PP02", value: $o2Pressure, formatter: NumberFormatter())
+                        .keyboardType(.decimalPad)
+                        .frame(width: 80)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 .frame(width: 360, height: 44)
                 .background(Color(.systemFill))
@@ -155,22 +153,12 @@ struct PelagianGasAndRegsView: View {
                 Button("Back") {
                     presentationMode.wrappedValue.dismiss()
                 }
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 180, height: 44)
-                .background(Color(.systemGray))
-                .cornerRadius(8)
+                .modifier(SmallSecondaryButtonModifier())
                 
                 NavigationLink("Next") {
                     PelagianPressureTestAndPreBreatheView()
                 }
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 180, height: 44)
-                .background(Color(.systemBlue))
-                .cornerRadius(8)
+                .modifier(SmallPrimaryButtonModifier())
             }
             .navigationTitle("Gas And Regulators")
             .navigationBarBackButtonHidden(true)

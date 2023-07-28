@@ -38,12 +38,7 @@ struct PelagianSummaryView: View {
                 NavigationLink("Submit", destination: {
                     HomeView()
                 })
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 360, height: 44)
-                .background(Color(.systemBlue))
-                .cornerRadius(8)
+                .modifier(PrimaryButtonModifier())
             }
             .navigationTitle("Summary of Build")
             .navigationBarBackButtonHidden(true)

@@ -72,22 +72,12 @@ struct PelagianPressureTestAndPreBreatheView: View {
                 Button("Back") {
                     presentationMode.wrappedValue.dismiss()
                 }
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 180, height: 44)
-                .background(Color(.systemGray))
-                .cornerRadius(8)
+                .modifier(SmallSecondaryButtonModifier())
                 
                 NavigationLink("Finish", destination: {
                     PelagianSummaryView()
                 })
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 180, height: 44)
-                .background(Color(.systemBlue))
-                .cornerRadius(8)
+                .modifier(SmallPrimaryButtonModifier())
                 
                     
             }

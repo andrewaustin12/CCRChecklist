@@ -31,10 +31,7 @@ struct SWComputerView: View {
                     Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
 
                     Text("Note millivolts from each cell at ambient air pressure (.21) and fill columns 1 & 2 of linearity sheet")
-
-
                 }
-
             }
             
 
@@ -61,12 +58,7 @@ struct SWComputerView: View {
                         .accentColor(.white)
                 } label: {
                     Text("Next")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 360, height: 44)
-                        .background(Color(.systemBlue))
-                        .cornerRadius(8)
+                        .modifier(PrimaryButtonModifier())
                 }
             }
             

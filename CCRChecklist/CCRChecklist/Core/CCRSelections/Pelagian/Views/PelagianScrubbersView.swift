@@ -52,22 +52,12 @@ struct PelagianScrubbersView: View {
                 Button("Back") {
                     presentationMode.wrappedValue.dismiss()
                 }
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 180, height: 44)
-                .background(Color(.systemGray))
-                .cornerRadius(8)
+                .modifier(SmallSecondaryButtonModifier())
                 
                 NavigationLink("Next") {
                     PelagianAssemblyView()
                 }
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .frame(width: 180, height: 44)
-                .background(Color(.systemBlue))
-                .cornerRadius(8)
+                .modifier(SmallPrimaryButtonModifier())
             }
             .navigationTitle("Scrubbers")
             .navigationBarBackButtonHidden(true)
