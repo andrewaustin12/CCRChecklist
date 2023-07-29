@@ -23,6 +23,13 @@ struct PelagianAssemblyView: View {
         VStack {
 //            HStack{TabHeaderView(title1: "Pelagian Checklist")}
 //                .ignoresSafeArea()
+            HStack {
+                Text("Checks")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.leading)
+                
+            }
             
             ScrollView {
                 VStack {
@@ -32,7 +39,7 @@ struct PelagianAssemblyView: View {
                     }
                     .padding()
                     .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
+                    .background(Color(.systemGray6))
                     .cornerRadius(8)
                 }
                 
@@ -47,7 +54,7 @@ struct PelagianAssemblyView: View {
                     }
                     .padding()
                     .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
+                    .background(Color(.systemGray6))
                     .cornerRadius(8)
                 }
                 
@@ -81,7 +88,7 @@ struct PelagianAssemblyView: View {
                     }
                     .padding()
                     .frame(width: 360, height: 280)
-                    .background(Color(.systemFill))
+                    .background(Color(.systemGray6))
                     .cornerRadius(8)
                     
                 }
@@ -97,7 +104,7 @@ struct PelagianAssemblyView: View {
                     }
                     .padding()
                     .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
+                    .background(Color(.systemGray6))
                     .cornerRadius(8)
                 }
             }

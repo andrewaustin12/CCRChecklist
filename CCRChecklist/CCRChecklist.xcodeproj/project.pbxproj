@@ -17,6 +17,9 @@
 		3F7B48262A73B1B300C9479B /* SecondaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48252A73B1B300C9479B /* SecondaryButtonModifier.swift */; };
 		3F7B48292A73B2CF00C9479B /* SmallPrimaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48282A73B2CF00C9479B /* SmallPrimaryButtonModifier.swift */; };
 		3F7B482B2A73B2EA00C9479B /* SmallSecondaryButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B482A2A73B2EA00C9479B /* SmallSecondaryButtonModifier.swift */; };
+		3F7B482D2A74B37C00C9479B /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B482C2A74B37C00C9479B /* CustomInputField.swift */; };
+		3F7B48312A74BA2600C9479B /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48302A74BA2600C9479B /* TextArea.swift */; };
+		3F7B48352A74BD9100C9479B /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48342A74BD9100C9479B /* NewNoteView.swift */; };
 		3FA8054E2A6F9F6100452E2E /* SidewinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */; };
 		3FCBDF5A2A6BCA1900B0DD19 /* CCRChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF592A6BCA1900B0DD19 /* CCRChecklistApp.swift */; };
 		3FCBDF5C2A6BCA1900B0DD19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBDF5B2A6BCA1900B0DD19 /* ContentView.swift */; };
@@ -70,6 +73,9 @@
 		3F7B48252A73B1B300C9479B /* SecondaryButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonModifier.swift; sourceTree = "<group>"; };
 		3F7B48282A73B2CF00C9479B /* SmallPrimaryButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPrimaryButtonModifier.swift; sourceTree = "<group>"; };
 		3F7B482A2A73B2EA00C9479B /* SmallSecondaryButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSecondaryButtonModifier.swift; sourceTree = "<group>"; };
+		3F7B482C2A74B37C00C9479B /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		3F7B48302A74BA2600C9479B /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		3F7B48342A74BD9100C9479B /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 		3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidewinderModel.swift; sourceTree = "<group>"; };
 		3FCBDF562A6BCA1900B0DD19 /* CCRChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCRChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCBDF592A6BCA1900B0DD19 /* CCRChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCRChecklistApp.swift; sourceTree = "<group>"; };
@@ -265,6 +271,8 @@
 				3FCBDF882A6BE1D400B0DD19 /* TabHeaderView.swift */,
 				3FCBDF822A6BDB1A00B0DD19 /* RoundedShapeView.swift */,
 				3FCBDFB62A6C500900B0DD19 /* WarningView.swift */,
+				3F7B482C2A74B37C00C9479B /* CustomInputField.swift */,
+				3F7B48302A74BA2600C9479B /* TextArea.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				3FCBDF8A2A6BE5D400B0DD19 /* NotesView.swift */,
+				3F7B48342A74BD9100C9479B /* NewNoteView.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -470,10 +479,12 @@
 				3F7B48182A72627A00C9479B /* PelagianTanksAnalyzedView.swift in Sources */,
 				3FCBDF7C2A6BD78200B0DD19 /* CompleteSignUpView.swift in Sources */,
 				3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */,
+				3F7B48352A74BD9100C9479B /* NewNoteView.swift in Sources */,
 				3FCBDFC72A6CC6EC00B0DD19 /* User.swift in Sources */,
 				3FA8054E2A6F9F6100452E2E /* SidewinderModel.swift in Sources */,
 				3FCBDF8B2A6BE5D400B0DD19 /* NotesView.swift in Sources */,
 				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
+				3F7B48312A74BA2600C9479B /* TextArea.swift in Sources */,
 				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,
 				3FCBDF832A6BDB1A00B0DD19 /* RoundedShapeView.swift in Sources */,
 				3FCBDF872A6BDFAA00B0DD19 /* BuildHistoryView.swift in Sources */,
@@ -493,6 +504,7 @@
 				3F7B481E2A726A0000C9479B /* PelagianGasAndRegsView.swift in Sources */,
 				3FCBDFBF2A6CBCB800B0DD19 /* LoginViewModel.swift in Sources */,
 				3FCBDFBD2A6CB91600B0DD19 /* CurrentUserProfileView.swift in Sources */,
+				3F7B482D2A74B37C00C9479B /* CustomInputField.swift in Sources */,
 				3FCBDF962A6BF1BC00B0DD19 /* SWOxygenView.swift in Sources */,
 				3F7B48242A73B06300C9479B /* PrimaryButtonModifier.swift in Sources */,
 				3FCBDF712A6BCC5400B0DD19 /* LoginView.swift in Sources */,

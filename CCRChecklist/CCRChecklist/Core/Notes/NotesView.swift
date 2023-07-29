@@ -7,18 +7,58 @@
 
 import SwiftUI
 
+
 struct NotesView: View {
+    @State private var showNewNoteView = false
+    @State var note = ""
+    
     var body: some View {
-        VStack {
-            HStack {
-                TabHeaderView(title1: "Notes")
-            }
-            .ignoresSafeArea()
+
+        ZStack(alignment: .bottomTrailing) {
+            VStack(spacing: 0) {
+                
+                HStack {
+                    Text("Add a new note...")
+                        .font(.title)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("new not added")
+                    } label: {
+                        Image(systemName: "trash")
+                            .resizable()
+                            .frame(width: 23, height: 23)
+                            .foregroundColor(.white)
+                    }
+
+                }
+                .padding()
+                .padding(.top, 75)
+                .background(Color.blue)
+                
+                Spacer()
             
-            Spacer()
+            }.edgesIgnoringSafeArea(.top)
+            
             
             VStack {
-                // add notes here
+                Button {
+                    showNewNoteView.toggle()
+                } label: {
+                    Image(systemName: "plus.circle.fill")
+                        .resizable()
+                        .foregroundColor(.blue)
+                        .accentColor(.white)
+                        .frame(width: 60, height: 60)
+                        .padding()
+                }
+                .clipShape(Circle())
+                .padding()
+                .fullScreenCover(isPresented: $showNewNoteView) {
+                    NewNoteView()
+                }
             }
         }
     }

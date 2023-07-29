@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct SWCounterLungView: View {
+    @State private var isCounterLungPlacedChecked = false
+    @State private var isCounterLungInspectedChecked = false
+    @State private var isCounterLungAttachedChecked = false
+    @State private var isCannistersAttachedChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
-            }
-            .ignoresSafeArea()
-            
-            Spacer()
             
             VStack(alignment: .leading) {
                 
@@ -26,14 +24,25 @@ struct SWCounterLungView: View {
                     .padding(.leading)
                 
                 List {
-                    Text("Place counter lung in harness ensuring waistbelt and wing are in proper positions.")
                     
-                    Text("Inspect, clean and lubricate counter lung O-rings as needed")
+                    Toggle(isOn: $isCounterLungPlacedChecked) {
+                        Text("Place counter lung in harness ensuring waistbelt and wing are in proper positions.")
+                    }
                     
-                    Text("Attach counter lung to cannister ensuring the clips are set properly")
+                    Toggle(isOn: $isCounterLungInspectedChecked) {
+                        Text("Inspect, clean and lubricate counter lung O-rings as needed")
+                    }
                     
-                    Text("Attach cannisters to harness")
+                    Toggle(isOn: $isCounterLungAttachedChecked) {
+                        Text("Attach counter lung to cannister ensuring the clips are set properly")
+                    }
+                    
+                    Toggle(isOn: $isCannistersAttachedChecked) {
+                        Text("Attach cannisters to harness")
+                    }
+                    
                 }
+                .font(.title3)
             }
             Spacer()
             

@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct SWFlushView: View {
+    @State private var isO2FlushChecked = false
+    @State private var isO2MillivoltsChecked = false
+    @State private var isComputerCalibratedChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
-            }
-            .ignoresSafeArea()
-            
-            Spacer()
             
             VStack(alignment: .leading) {
                 
@@ -27,13 +24,26 @@ struct SWFlushView: View {
                 
                 List {
                     
-                    Text("Open mouthpiece slightly, flush with O2. Monitor cells for smooth and even increases")
+                    Toggle(isOn: $isO2FlushChecked) {
+                        Text("Open mouthpiece slightly, flush with O2. Monitor cells for smooth and even increases")
+                    }
                     
-                    Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
                     
-                    Text("Calibrate computer if necessary (make sure loop is at ambient pressure)")
+                    Toggle(isOn: $isO2MillivoltsChecked) {
+                        Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
+                    }
+                    
+                    
+                    Toggle(isOn: $isComputerCalibratedChecked) {
+                        Text("Calibrate computer if necessary (make sure loop is at ambient pressure)")
+                    }
+                    
+                    Text("Insert Linearity Chart here with timer")
+                        .foregroundColor(.red)
+                    
     
                 }
+                .font(.title3)
             }
             Spacer()
             

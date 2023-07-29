@@ -42,6 +42,7 @@ struct MainTabView: View {
                 .tabItem{
                     Image(systemName: "person")
                 }.tag(3)
+
             
 //            CurrentUserProfileView(user: User.MOCK_USERS[0])
 //                .onAppear{

@@ -15,10 +15,11 @@ struct PelagianScrubbersView: View {
     var body: some View {
         VStack {
             
-//            HStack {
-//                TabHeaderView(title1: "Pelagian Checklist")
-//                    .ignoresSafeArea()
-//            }
+            HStack {
+                Text("Scrubbers")
+                    .font(.title)
+                    .bold()
+            }
             
             ScrollView {
                 VStack() {
@@ -28,7 +29,7 @@ struct PelagianScrubbersView: View {
                     }
                     .padding()
                     .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
+                    .background(Color(.systemGray6))
                     .cornerRadius(8)
                 }
                 
@@ -44,7 +45,7 @@ struct PelagianScrubbersView: View {
                     }
                     .padding()
                     .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
+                    .background(Color(.systemGray6))
                     .cornerRadius(8)
             }
             

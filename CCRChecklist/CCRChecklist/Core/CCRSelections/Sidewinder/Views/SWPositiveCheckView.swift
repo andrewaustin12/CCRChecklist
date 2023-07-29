@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct SWPositiveCheckView: View {
+    @State private var isO2PositiveFlushChecked = false
+    @State private var isO2MillivoltsChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
-            }
-            .ignoresSafeArea()
-            
-            Spacer()
             
             VStack(alignment: .leading) {
                 
@@ -27,14 +23,23 @@ struct SWPositiveCheckView: View {
                 
                 List {
                     
-                    Text("Close DSV and OPV, flush with O2. Monitor cells for smooth and even increases until reaching over 1.00 ")
+                    Toggle(isOn: $isO2PositiveFlushChecked) {
+                        Text("Close DSV and OPV, flush with O2. Monitor cells for smooth and even increases until reaching over 1.00 ")
+                    }
                     
-                    Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
+                    Toggle(isOn: $isO2MillivoltsChecked) {
+                        Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
+                    }
                     
-                    Text("Something here")
-    
+                    Text("INSERT Lenearity chart with timer below")
+
                 }
+                .font(.title3)
+
             }
+            
+            
+            
             Spacer()
             
             HStack {

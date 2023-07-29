@@ -18,7 +18,22 @@ struct BuildHistoryView: View {
             Spacer()
             
             VStack {
-                // loop through previous builds
+                Button {
+                    print("clicked")
+                } label: {
+                    Text("Build history")
+                }
+                .modifier(PrimaryButtonModifier())
+                
+                Button {
+                    print("clicked")
+                } label: {
+                    Text("Cell history")
+                }
+                .modifier(PrimaryButtonModifier())
+                
+                
+                Spacer()
             }
         }
     }

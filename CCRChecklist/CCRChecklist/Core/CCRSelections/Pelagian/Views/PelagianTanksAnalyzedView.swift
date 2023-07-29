@@ -21,10 +21,8 @@ struct PelagianTanksAnalyzedView: View {
     
                 HStack() {
                     Text("Enter PP02")
-                    TextField("PP02",
-                              value: $ppo2,
-                              formatter: NumberFormatter())
-                                .keyboardType(.numberPad)
+                    TextField("PP02", text: $ppo2)
+                                .keyboardType(.decimalPad)
                                 .frame(width: 80)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                     }

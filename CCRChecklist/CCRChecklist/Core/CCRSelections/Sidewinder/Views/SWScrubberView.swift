@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SWScrubberView: View {
+    @State private var isCanisterChecked = false
+    @State private var isCanisterInspectedChecked = false
+    @State private var isScreenChecked = false
+    @State private var isCanisterAlignedChecked = false
+    @State private var isStacktimeChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "Kiss Sidewinder Checklist")
-            }
-            .ignoresSafeArea()
             
             VStack(alignment: .leading) {
                 Text("Scrubbers")
@@ -23,17 +25,27 @@ struct SWScrubberView: View {
                 
                 List {
                     
-                    Text("Fill and pack each canister with absorbent to inner line")
+                    Toggle(isOn: $isCanisterChecked) {
+                        Text("Fill and pack each canister with absorbent to inner line")
+                    }
                     
-                    Text("Inspect, clean and lubricate Canister O-Rings as needed")
+                    Toggle(isOn: $isCanisterInspectedChecked) {
+                        Text("Inspect, clean and lubricate Canister O-Rings as needed")
+                    }
                     
-                    Text("Place Screens in cannisters")
+                    Toggle(isOn: $isScreenChecked) {
+                        Text("Place Screens in canisters")
+                    }
                     
-                    Text("Attach each cannister head ensuring proper alignment. Make sure they are on correct cannisters")
+                    Toggle(isOn: $isCanisterAlignedChecked) {
+                        Text("Attach each cannister head ensuring proper alignment. Make sure they are on correct cannisters")
+                    }
                     
-                    Text("Reset stacktime")
-
+                    Toggle(isOn: $isStacktimeChecked) {
+                        Text("Reset stacktime")
+                    }
                 }
+                .font(.title3)
             }
             
             Spacer()

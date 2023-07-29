@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct SWTransportView: View {
+    @State private var isDSVClosedChecked = false
+    @State private var isO2TankClosedChecked = false
+    @State private var isComputerClippedChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
-            }
-            .ignoresSafeArea()
             
             Spacer()
             
@@ -27,15 +26,21 @@ struct SWTransportView: View {
                 
                 List {
                     
-                    Text("Ensure the DSV is closed")
+                    Toggle(isOn: $isDSVClosedChecked) {
+                        Text("Ensure the DSV is closed")
+                    }
                     
-                    Text("Ensure O2 tank is closed")
+                    Toggle(isOn: $isO2TankClosedChecked) {
+                        Text("Ensure O2 tank is closed")
+                    }
                     
-                    Text("Ensure Computer is cliped and secured")
+                    Toggle(isOn: $isComputerClippedChecked) {
+                        Text("Ensure Computer is cliped and secured")
+                    }
                     
                     Text("(Optional) If O2 tank is detached for transport ensure O2 1st stage is secured.")
-    
                 }
+                .font(.title3)
             }
             Spacer()
             

@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct SWLoopView: View {
+    @State private var isMouthPieceChecked = false
+    @State private var isMushroomValveChecked = false
+    @State private var isORingsChecked = false
+    @State private var isLoopInstalledChecked = false
+    @State private var isBayonetsChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-                
-            }
-            .ignoresSafeArea()
-            
-            Spacer()
             
             VStack(alignment: .leading) {
                 
@@ -26,16 +25,29 @@ struct SWLoopView: View {
                     .padding(.leading)
                 
                 List {
-                    Text("Inpect Mouth Piece for holes and tears")
                     
-                    Text("Preform Mushroom Valve Check")
+                    Toggle(isOn: $isMouthPieceChecked) {
+                        Text("Inpect Mouth Piece for holes and tears")
+                    }
                     
-                    Text("Inspect and lube O-Rings")
+                    Toggle(isOn: $isMushroomValveChecked) {
+                        Text("Preform Mushroom Valve Check")
+                    }
                     
-                    Text("Install loop to towers (Verify EXHALE goes to the RIGHT tower)")
+                    Toggle(isOn: $isORingsChecked) {
+                        Text("Inspect and lube O-Rings")
+                    }
                     
-                    Text("Verify bayonets are closed")
+                    Toggle(isOn: $isLoopInstalledChecked) {
+                        Text("Install loop to towers (Verify EXHALE goes to the RIGHT tower)")
+                    }
+                    
+                    Toggle(isOn: $isBayonetsChecked) {
+                        Text("Verify bayonets are closed")
+                    }
+                    
                 }
+                .font(.title3)
             }
             
             Spacer()

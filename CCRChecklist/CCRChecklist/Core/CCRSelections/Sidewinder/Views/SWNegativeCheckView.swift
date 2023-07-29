@@ -8,15 +8,10 @@
 import SwiftUI
 
 struct SWNegativeCheckView: View {
+    @State private var isNegativeChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
-            }
-            .ignoresSafeArea()
-            
-            Spacer()
             
             VStack(alignment: .leading) {
                 
@@ -26,20 +21,18 @@ struct SWNegativeCheckView: View {
                     .padding(.leading)
                 
                 List {
-                    Section {
-
+                    
+                    Toggle(isOn: $isNegativeChecked) {
                         Text("Preform Negative check on air")
                     }
                     
-                    Section {
-                        Text("The Millivolts should decend and hold. Pick a cell and record millivolt. Wait 5 minutes and compare starting millivolts to new value")
-                    }
-                        
+                    Text("The Millivolts should decend and hold. Pick a cell and record millivolt. Wait 5 minutes and compare starting millivolts to new value")
                     
-                    
-                    
+                    Text("Insert cell/timer below - remove this ")
                 }
+                .font(.title3)
             }
+            
             Spacer()
             
             HStack {

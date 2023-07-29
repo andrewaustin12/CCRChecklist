@@ -17,10 +17,7 @@ struct LoginView: View {
                 
                 AuthHeaderView(title1: "The CCR", title2: "Checklist")
                 
-                VStack {
-                    
-
-                    
+                VStack {                 
                     // logo image
                     Image("")
                         .resizable()
@@ -28,17 +25,18 @@ struct LoginView: View {
                         .frame(width: 300, height: 100)
                     
                     // text fields
-                    VStack {
-                        TextField("Enter your email", text: $viewModel.email)
-                            .fontWeight(.semibold)
-                            .autocapitalization(.none)
-                            .modifier(TextFieldModifier())
+                    VStack(spacing: 40) {
+                        CustomInputField(imageName: "envelope",
+                                         placeholderText: "Email",
+                                         text: $viewModel.email)
                         
-                        SecureField("Enter your password", text: $viewModel.password)
-                            .fontWeight(.semibold)
-                            .modifier(TextFieldModifier())
-                        
+                        CustomInputField(imageName: "lock",
+                                         placeholderText: "Password",
+                                         isSecureField: true,
+                                         text: $viewModel.password)
                     }
+                    .padding(.horizontal, 22)
+                    .padding(.top, 44)
                     
                     Button {
                         print("Show forgot password")

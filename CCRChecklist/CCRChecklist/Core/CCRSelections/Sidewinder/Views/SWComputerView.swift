@@ -8,51 +8,32 @@
 import SwiftUI
 
 struct SWComputerView: View {
+    @State private var isBatteryChecked = false
+    @State private var isMillivoltsChecked = false
     
     var body: some View {
         VStack {
-            VStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            }
-            .ignoresSafeArea()
-                        
-            Spacer()
             
             VStack(alignment: .leading) {
                 Text("Computer")
-                    .padding(.top)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.leading)
-
-
+                
                 List {
-
-                    Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
-
-                    Text("Note millivolts from each cell at ambient air pressure (.21) and fill columns 1 & 2 of linearity sheet")
+                    Toggle(isOn: $isBatteryChecked) {
+                        Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
+                    }
+                    Toggle(isOn: $isMillivoltsChecked) {
+                        Text("Note millivolts from each cell at ambient air pressure (.21) and fill columns 1 & 2 of linearity sheet")
+                    }
                 }
+                .font(.title3)
             }
-            
-
             
             Spacer()
             
             HStack {
-//                NavigationLink{
-//                    HomeView()
-////                        .navigationBarBackButtonHidden(true)
-//                } label: {
-//                    Text("Back")
-//                        .font(.title)
-//                        .fontWeight(.semibold)
-//                        .foregroundColor(.white)
-//                        .frame(width: 180, height: 44)
-//                        .background(Color(.systemGray))
-//                        .cornerRadius(8)
-//                }
-                
-                
                 NavigationLink{
                     SWScrubberView()
                         .accentColor(.white)

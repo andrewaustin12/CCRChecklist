@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct SWOxygenView: View {
+    @State private var isO2AnalyzedChecked = false
+    @State private var isO2PressureChecked = false
+    @State private var isO2MountedChecked = false
+    
     var body: some View {
         VStack {
-            HStack {
-                TabHeaderView(title1: "KISS Sidewinder Checklist")
-            
-            }
-            .ignoresSafeArea()
-            
-            Spacer()
             
             VStack(alignment: .leading) {
                 
@@ -27,13 +24,21 @@ struct SWOxygenView: View {
                 
                 List {
                     
-                    Text("Analyze Oxygen tank")
+                    Toggle(isOn: $isO2AnalyzedChecked) {
+                        Text("Analyze Oxygen tank")
+                    }
                     
-                    Text("Pressure check Oxygen tank")
                     
-                    Text("Mount 02, Properly Route hose and 1st stage. LEAVE TANK OFF.")
-    
+                    Toggle(isOn: $isO2PressureChecked) {
+                        Text("Pressure check Oxygen tank")
+                    }
+                    
+                    
+                    Toggle(isOn: $isO2MountedChecked) {
+                        Text("Mount 02, Properly Route hose and 1st stage. LEAVE TANK OFF.")
+                    }
                 }
+                .font(.title3)
                 
             }
             Spacer()
