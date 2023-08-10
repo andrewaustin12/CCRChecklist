@@ -23,7 +23,11 @@ struct SWCounterLungView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
-                List {
+                Text("Sidewinder Checklist")
+                    .bold()
+                    .padding(.leading)
+                
+                Form {
                     
                     Toggle(isOn: $isCounterLungPlacedChecked) {
                         Text("Place counter lung in harness ensuring waistbelt and wing are in proper positions.")

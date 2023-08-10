@@ -11,8 +11,7 @@ struct PelagianSummaryView: View {
     @State private var signature = ""
     var body: some View {
         VStack {
-//            HStack{TabHeaderView(title1: "Pelagian Checklist")}
-//                .ignoresSafeArea()
+
             ScrollView {
                 
                 Text("Signature Required")
@@ -40,7 +39,6 @@ struct PelagianSummaryView: View {
                 })
                 .modifier(PrimaryButtonModifier())
             }
-            .navigationTitle("Summary of Build")
             .navigationBarBackButtonHidden(true)
             .padding()
         }

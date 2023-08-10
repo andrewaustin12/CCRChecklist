@@ -12,10 +12,9 @@ struct HomeView: View {
         NavigationView {
             
             VStack {
-                HStack {
-                    TabHeaderView(title1: "Select a Unit")
-                }
-                .ignoresSafeArea()
+               Text("SELECT A UNIT")
+                    .font(.title)
+                    .bold()
                 
                 VStack {
                     
@@ -47,10 +46,23 @@ struct HomeView: View {
                             .cornerRadius(8)
                     }
                     
-                    Button {
-                        print("JJ CCR")
+                    NavigationLink {
+                        LibertyAssemblyOneView()
+                            .navigationBarBackButtonHidden(true)
                     } label: {
-                        Text("JJ CCR")
+                        Text("Liberty BMCL + BOV")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 360, height: 44)
+                            .background(Color(.systemBlue))
+                            .cornerRadius(8)
+                    }
+                    
+                    Button {
+                        print("SF2")
+                    } label: {
+                        Text("SF2")
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)

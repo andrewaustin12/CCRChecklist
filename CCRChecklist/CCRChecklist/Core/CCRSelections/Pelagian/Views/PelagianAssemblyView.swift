@@ -13,7 +13,8 @@ struct PelagianAssemblyView: View {
     @State private var isAirCalibrationChecked = false
     @State private var isHoseChecked = false
     @State private var isMushroomValvesChecked = false
-    @State private var isPConChecked = false
+    @State private var isPConInhaleChecked = false
+    @State private var isPConExhaleChecked = false
     @State private var isORingChecked = false
     @State private var isCo2PipeChecked = false
     @State private var isTandPChecked = false
@@ -21,91 +22,82 @@ struct PelagianAssemblyView: View {
     
     var body: some View {
         VStack {
-//            HStack{TabHeaderView(title1: "Pelagian Checklist")}
-//                .ignoresSafeArea()
-            HStack {
-                Text("Checks")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading)
-                
+            Text("Assembly Checks")
+                .font(.title)
+            HStack{
+                Text("PELAGIAN CHECKLIST")
+                    .bold()
             }
             
-            ScrollView {
-                VStack {
-                    Toggle(isOn: $isBatteryTestedChecked) {
-                        Text("Is Battery Tested?")
-                            .fontWeight(.medium)
-                    }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                }
-                
-                VStack() {
-                    Toggle(isOn: $isAirCalibrationChecked) {
-                        VStack(alignment: .leading) {
-                            Text("Air Calibration")
-                                .fontWeight(.medium)
-                            Text("Set to .209?")
-                                .fontWeight(.medium)
-                        }
-                    }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                }
-                
-                VStack() {
+            Form {
+                Section {
                     VStack {
-                        Text("Loop Checks")
-                        Toggle(isOn: $isHoseChecked) {
-                            Text("Hose Check")
+                        Toggle(isOn: $isBatteryTestedChecked) {
+                            Text("Is Battery Tested?")
                                 .fontWeight(.medium)
                         }
-                        Toggle(isOn: $isMushroomValvesChecked) {
-                            Text("Mushroom Values")
-                                .fontWeight(.medium)
-                        }
-                        Toggle(isOn: $isPConChecked) {
-                            Text("P-Con")
-                                .fontWeight(.medium)
-                        }
-                        Toggle(isOn: $isORingChecked) {
-                            Text("O-Ring")
-                                .fontWeight(.medium)
-                        }
-                        Toggle(isOn: $isCo2PipeChecked) {
-                            Text("CO2 pipe seated in socket")
-                                .fontWeight(.medium)
-                        }
-                        Toggle(isOn: $isTandPChecked) {
-                            Text("Tees & plugs (twist & tug)")
-                                .fontWeight(.medium)
-                        }
+
                     }
-                    .padding()
-                    .frame(width: 360, height: 280)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
                     
-                }
-                
-                VStack() {
-                    Toggle(isOn: $isUnitAssembledChecked) {
-                        VStack(alignment: .leading) {
-                            Text("Are you satisfied with the")
-                                .fontWeight(.medium)
-                            Text("assembly of your unit?")
-                                .fontWeight(.medium)
+                    VStack() {
+                        // TODO: CHANGE TO 3 NUM INPUTS FOR CELLS 1-3
+                        Toggle(isOn: $isAirCalibrationChecked) {
+                            VStack(alignment: .leading) {
+                                Text("Air Calibration")
+                                    .fontWeight(.medium)
+                                Text("Set to .209?")
+                                    .fontWeight(.medium)
+                            }
+                        }
+
+                    }
+                    
+                    VStack() {
+                        VStack {
+                            Text("Loop Checks")
+//                            Toggle(isOn: $isHoseChecked) {
+//                                Text("Hose Check")
+//                                    .fontWeight(.medium)
+//                            }
+                            Toggle(isOn: $isMushroomValvesChecked) {
+                                Text("Hose Check Valves")
+                                    .fontWeight(.medium)
+                            }
+                            Toggle(isOn: $isPConInhaleChecked) {
+                                Text("P-Con inhale")
+                                    .fontWeight(.medium)
+                            }
+                            Toggle(isOn: $isPConExhaleChecked) {
+                                Text("P-Con exhale")
+                                    .fontWeight(.medium)
+                            }
+                            Toggle(isOn: $isORingChecked) {
+                                Text("O-Ring")
+                                    .fontWeight(.medium)
+                            }
+                            Toggle(isOn: $isCo2PipeChecked) {
+                                Text("CO2 pipe seated in socket")
+                                    .fontWeight(.medium)
+                            }
+                            Toggle(isOn: $isTandPChecked) {
+                                Text("Tees & plugs (twist & tug)")
+                                    .fontWeight(.medium)
+                            }
                         }
                     }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
+                    
+                    VStack() {
+                        Toggle(isOn: $isUnitAssembledChecked) {
+                            VStack(alignment: .leading) {
+                                Text("Are you satisfied with the")
+                                    .fontWeight(.medium)
+                                Text("assembly of your unit?")
+                                    .fontWeight(.medium)
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Steps 7 - 16")
                 }
             }
             
@@ -120,10 +112,8 @@ struct PelagianAssemblyView: View {
                 }
                 .modifier(SmallPrimaryButtonModifier())
             }
-            .navigationTitle("Assembly")
+
             .navigationBarBackButtonHidden(true)
-            .navigationBarTitleDisplayMode(.automatic)
-            .padding()
         }
     }
 }

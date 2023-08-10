@@ -38,12 +38,12 @@ struct SWFlushView: View {
                         Text("Calibrate computer if necessary (make sure loop is at ambient pressure)")
                     }
                     
-                    Text("Insert Linearity Chart here with timer")
-                        .foregroundColor(.red)
-                    
     
                 }
                 .font(.title3)
+            }
+            VStack {
+                LinearityChartMvO2View()
             }
             Spacer()
             

@@ -9,64 +9,60 @@ import SwiftUI
 
 struct PelagianPressureTestAndPreBreatheView: View {
     @Environment(\.presentationMode) var presentationMode
+    
+    @State var showSheet: Bool = false
     @State private var isPosTestChecked = false
     @State private var isNegTestChecked = false
     @State private var isPrebreatheChecked = false
     
     var body: some View {
         VStack {
-//            HStack{TabHeaderView(title1: "Pelagian Checklist")}
-//                .ignoresSafeArea()
+            Text("PELAGIAN CHECKLIST")
+                .font(.title)
+            Text("Pressure Test and Pre-breathe")
+                .font(.headline)
+                .bold()
             
-            ScrollView {
-                
-                VStack {
-                    Toggle(isOn: $isPosTestChecked) {
-                        Text("Positive pressure test satisfactory?")
-                            .fontWeight(.medium)
+            Form {
+                Section {
+                    VStack {
+                        Toggle(isOn: $isPosTestChecked) {
+                            Text("Positive pressure test satisfactory?")
+                                .fontWeight(.medium)
+                        }
                     }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
-                }
-                
-                VStack {
-                    Toggle(isOn: $isNegTestChecked) {
-                        Text("Negative pressure test satisfactory?")
-                            .fontWeight(.medium)
+                    VStack {
+                        Toggle(isOn: $isNegTestChecked) {
+                            Text("Negative pressure test satisfactory?")
+                                .fontWeight(.medium)
+                        }
                     }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
-                }
-                
-                VStack {
-                    Toggle(isOn: $isPrebreatheChecked) {
-                        Text("10 minute pre-breathe done?")
-                            .fontWeight(.medium)
+                    VStack {
+                        Toggle(isOn: $isPrebreatheChecked) {
+                            Text("10 minute pre-breathe done?")
+                                .fontWeight(.medium)
+                        }
                     }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
+                    Button {
+                        showSheet.toggle()
+                    } label: {
+                        Text("Timer")
+                            .font(.title)
+                            .frame(width: 300, height: 44)
+                            .background(.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .sheet(isPresented: $showSheet) {
+                        CountdownTimerView()
+                    }
+                    
+                } header: {
+                    Text("Steps 27 - 29")
                 }
-                
-                HStack {
-                    Image(systemName: "clock")
-                    
-                    Text("START 10 MIN TIMER")
-                    
-                    
-                }
-                .padding()
-                .frame(width: 360, height: 80)
-                .background(Color(.systemBlue))
-                .foregroundColor(.white)
-                .fontWeight(.semibold)
-                .cornerRadius(8)
             }
+            
+            
             
             HStack {
                 Button("Back") {
@@ -78,12 +74,8 @@ struct PelagianPressureTestAndPreBreatheView: View {
                     PelagianSummaryView()
                 })
                 .modifier(SmallPrimaryButtonModifier())
-                
-                    
             }
-            .navigationTitle("Pressure Test and PreBreathe")
             .navigationBarBackButtonHidden(true)
-            .navigationBarTitleDisplayMode(.automatic)
             .padding()
         }
     }

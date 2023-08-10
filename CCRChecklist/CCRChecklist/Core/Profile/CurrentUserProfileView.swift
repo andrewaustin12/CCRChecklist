@@ -26,35 +26,35 @@ struct CurrentUserProfileView: View {
             .ignoresSafeArea()
             
             
-            VStack {
-                
-                Text("Hello, Andy!")
-                    .font(.title)
-                
-                HStack{
-                    Button("Edit") {
-                        print("edit email")
-                    }
-                    
-                    TextField("Change your email", text: $email)
-                        .fontWeight(.semibold)
-                        .autocapitalization(.none)
-                        .modifier(TextFieldModifier())
-                    
-                }
-                .padding()
-                
-                HStack {
-                    Button("Edit") {
-                        print("edit password")
-                    }
-                    SecureField("Change your password", text: $password)
-                        .fontWeight(.semibold)
-                        .modifier(TextFieldModifier())
-                }
-                .padding()
-
-            }
+//            VStack {
+//
+//                Text("Hello, Andy!")
+//                    .font(.title)
+//
+//                HStack{
+//                    Button("Edit") {
+//                        print("edit email")
+//                    }
+//
+//                    TextField("Change your email", text: $email)
+//                        .fontWeight(.semibold)
+//                        .autocapitalization(.none)
+//                        .modifier(TextFieldModifier())
+//
+//                }
+//                .padding()
+//
+//                HStack {
+//                    Button("Edit") {
+//                        print("edit password")
+//                    }
+//                    SecureField("Change your password", text: $password)
+//                        .fontWeight(.semibold)
+//                        .modifier(TextFieldModifier())
+//                }
+//                .padding()
+//
+//            }
             
             Spacer()
             

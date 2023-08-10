@@ -22,76 +22,70 @@ struct PelagianGasAndRegsView: View {
     
     var body: some View {
         VStack {
-//            HStack{ TabHeaderView(title1: "Pelagian Checklist")}
-//                .ignoresSafeArea()
+            Text("PELAGIAN CHECKLIST")
+                .font(.title)
+            Text("Pressure, Regs and Guage Tests")
+                .bold()
             
-            ScrollView {
-                Text("Remaining pressure")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text("Enter remaining pressure in Bars")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                Spacer()
-                
-                HStack() {
-                    Text("Enter 02")
-                    TextField("PP02", value: $o2Pressure, formatter: NumberFormatter())
-                        .keyboardType(.decimalPad)
+            Form {
+                Section{
+                    VStack {
+                        Text("Enter remaining pressure in Bars")
+                            .font(.title2)
+                        HStack() {
+                            Text("Enter 02")
+                            Spacer()
+                            TextField("PP02", value: $o2Pressure,
+                                      formatter: NumberFormatter())
+                            .keyboardType(.decimalPad)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                    }
+                    
+                    HStack() {
+                        Text("Enter Diluent")
+                        Spacer()
+                        TextField("PP02",
+                                  value: $diluentPressure,
+                                  formatter: NumberFormatter())
+                        .keyboardType(.numberPad)
                         .frame(width: 80)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    
+                    HStack() {
+                        Text("Enter Bailout Gas")
+                        Spacer()
+                        TextField("PP02",
+                                  value: $bailoutPressure,
+                                  formatter: NumberFormatter())
+                        .keyboardType(.numberPad)
+                        .frame(width: 80)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    
+                    HStack() {
+                        VStack(alignment: .leading) {
+                            Text("Flow rate at surface ")
+                            Text("Set to (number of turns)")
+                        }
+                        Spacer()
+                        TextField("NUM",
+                                  value: $bailoutPressure,
+                                  formatter: NumberFormatter())
+                        .keyboardType(.numberPad)
+                        .frame(width: 80)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                } header: {
+                    Text("Steps 17 -20")
                 }
-                .frame(width: 360, height: 44)
-                .background(Color(.systemFill))
-                .cornerRadius(8)
-                
-                HStack() {
-                    Text("Enter Diluent")
-                    TextField("PP02",
-                              value: $diluentPressure,
-                              formatter: NumberFormatter())
-                                .keyboardType(.numberPad)
-                                .frame(width: 80)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
-
-                HStack() {
-                    Text("Enter Bailout Gas")
-                    TextField("PP02",
-                              value: $bailoutPressure,
-                              formatter: NumberFormatter())
-                                .keyboardType(.numberPad)
-                                .frame(width: 80)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    .frame(width: 360, height: 44)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
-                
-                HStack() {
-                    VStack(alignment: .leading) {
-                        Text("Flow rate at surface ")
-                        Text("set to (number of turns)")
-                    }
-                    TextField("PP02",
-                              value: $bailoutPressure,
-                              formatter: NumberFormatter())
-                                .keyboardType(.numberPad)
-                                .frame(width: 80)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
-                
-                VStack() {
+                Section {
                     
                     VStack {
                         
-                        Text("Regs Tested")
+                        Text("Gas Injections")
                             .font(.title2)
                         
                         Toggle(isOn: $isO2FeedChecked) {
@@ -110,14 +104,12 @@ struct PelagianGasAndRegsView: View {
                             Text("Bailout Reg")
                         }
                     }
-                    .padding()
-                    .frame(width: 360, height: 190)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
-                    
+                
+                } header: {
+                    Text("Steps 21 - 23")
                 }
                 
-                VStack() {
+                Section {
                     
                     VStack {
                         
@@ -140,11 +132,9 @@ struct PelagianGasAndRegsView: View {
                             Text("Bailout Reg")
                         }
                     }
-                    .padding()
-                    .frame(width: 360, height: 190)
-                    .background(Color(.systemFill))
-                    .cornerRadius(8)
                     
+                } header: {
+                    Text("Steps 24 - 26")
                 }
                 
                 
@@ -160,10 +150,7 @@ struct PelagianGasAndRegsView: View {
                 }
                 .modifier(SmallPrimaryButtonModifier())
             }
-            .navigationTitle("Gas And Regulators")
             .navigationBarBackButtonHidden(true)
-            .navigationBarTitleDisplayMode(.automatic)
-            .padding()
         }
     }
 }

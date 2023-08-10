@@ -14,24 +14,35 @@ struct SWComputerView: View {
     var body: some View {
         VStack {
             
-            VStack(alignment: .leading) {
-                Text("Computer")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading)
-                
-                List {
+            Text("Computers")
+                .font(.title)
+            HStack{
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+            }
+            
+            Form {
+                Section {
                     Toggle(isOn: $isBatteryChecked) {
                         Text("Turn on Computer. Check voltage of computer battery ( > 1.25V )")
                     }
                     Toggle(isOn: $isMillivoltsChecked) {
-                        Text("Note millivolts from each cell at ambient air pressure (.21) and fill columns 1 & 2 of linearity sheet")
+                        Text("Note millivolts from each cell at ambient air pressure (.21) and fill columns 1 of linearity sheet")
                     }
+                    
+                } header: {
+                    Text("Steps 1-2")
                 }
-                .font(.title3)
+                
+                
             }
+            .font(.title3)
             
-            Spacer()
+            VStack {
+                LinearityChartMvAirView()
+            }
+            .padding()
+            
             
             HStack {
                 NavigationLink{
@@ -42,9 +53,8 @@ struct SWComputerView: View {
                         .modifier(PrimaryButtonModifier())
                 }
             }
-            
+            .navigationBarBackButtonHidden(true)
         }
-        
     }
 }
 

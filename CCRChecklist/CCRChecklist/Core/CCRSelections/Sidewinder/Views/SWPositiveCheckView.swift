@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct SWPositiveCheckView: View {
+    @Environment (\.presentationMode) var presentationMode
+    
+    @State var showSheet: Bool = false
     @State private var isO2PositiveFlushChecked = false
     @State private var isO2MillivoltsChecked = false
     
     var body: some View {
         VStack {
             
-            VStack(alignment: .leading) {
+            VStack() {
                 
                 Text("Positive Check")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding(.leading)
+                    .padding()
                 
-                List {
+                Form {
                     
                     Toggle(isOn: $isO2PositiveFlushChecked) {
                         Text("Close DSV and OPV, flush with O2. Monitor cells for smooth and even increases until reaching over 1.00 ")
@@ -31,16 +34,31 @@ struct SWPositiveCheckView: View {
                         Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
                     }
                     
-                    Text("INSERT Lenearity chart with timer below")
+                    Button {
+                        showSheet.toggle()
+                    } label: {
+                        Text("Timer")
+                            .font(.title)
+                            .frame(width: 300, height: 44)
+                            .background(.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .sheet(isPresented: $showSheet) {
+                        CountdownTimerView()
+                    }
+            
 
                 }
                 .font(.title3)
 
             }
             
-            
-            
-            Spacer()
+            VStack{
+                LinearityChartMvO2View()
+
+            }
+            .padding(.top, 10)
             
             HStack {
                 NavigationLink{

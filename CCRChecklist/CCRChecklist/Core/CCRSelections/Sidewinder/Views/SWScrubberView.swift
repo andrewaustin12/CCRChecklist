@@ -17,33 +17,40 @@ struct SWScrubberView: View {
     var body: some View {
         VStack {
             
-            VStack(alignment: .leading) {
-                Text("Scrubbers")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading)
+            VStack {
+                Text("SCRUBBERS")
+                    .font(.title)
+                    .bold()
+                    
                 
-                List {
+                Text("Sidewinder Checklist")
                     
-                    Toggle(isOn: $isCanisterChecked) {
-                        Text("Fill and pack each canister with absorbent to inner line")
-                    }
                     
-                    Toggle(isOn: $isCanisterInspectedChecked) {
-                        Text("Inspect, clean and lubricate Canister O-Rings as needed")
+                Form {
+                    Section {
+                        Toggle(isOn: $isCanisterChecked) {
+                            Text("Fill and pack each canister with absorbent to inner line")
+                        }
+                        
+                        Toggle(isOn: $isCanisterInspectedChecked) {
+                            Text("Inspect, clean and lubricate Canister O-Rings as needed")
+                        }
+                        
+                        Toggle(isOn: $isScreenChecked) {
+                            Text("Place Screens in canisters")
+                        }
+                        
+                        Toggle(isOn: $isCanisterAlignedChecked) {
+                            Text("Attach each cannister head ensuring proper alignment. Make sure they are on correct cannisters")
+                        }
+                        
+                        Toggle(isOn: $isStacktimeChecked) {
+                            Text("Reset stacktime (optional)")
+                        }
+                    } header: {
+                        Text("Steps 3 - 7")
                     }
-                    
-                    Toggle(isOn: $isScreenChecked) {
-                        Text("Place Screens in canisters")
-                    }
-                    
-                    Toggle(isOn: $isCanisterAlignedChecked) {
-                        Text("Attach each cannister head ensuring proper alignment. Make sure they are on correct cannisters")
-                    }
-                    
-                    Toggle(isOn: $isStacktimeChecked) {
-                        Text("Reset stacktime")
-                    }
+
                 }
                 .font(.title3)
             }
@@ -68,6 +75,7 @@ struct SWScrubberView: View {
                         .modifier(SmallPrimaryButtonModifier())
                 }
             }
+            .navigationBarBackButtonHidden(true)
             .padding()
 
         }

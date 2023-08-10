@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BuildHistoryView: View {
+    @State private var showSheet = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -26,9 +28,12 @@ struct BuildHistoryView: View {
                 .modifier(PrimaryButtonModifier())
                 
                 Button {
-                    print("clicked")
+                    showSheet = true
                 } label: {
                     Text("Cell history")
+                }
+                .sheet(isPresented: $showSheet) {
+                    CellHistoryView()
                 }
                 .modifier(PrimaryButtonModifier())
                 

@@ -9,44 +9,46 @@ import SwiftUI
 
 struct PelagianScrubbersView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var isChecked = false
+    @State private var isScrubberFilledChecked = false
     @State private var timeRemaining = ""
     
     var body: some View {
         VStack {
             
-            HStack {
+            Text("PELAGIAN CHECKLIST")
+                .font(.title)
+            HStack{
                 Text("Scrubbers")
-                    .font(.title)
                     .bold()
             }
+
             
-            ScrollView {
-                VStack() {
-                    Toggle(isOn: $isChecked) {
-                        Text("Is the scrubber filled?")
+            Form {
+                Section {
+                    VStack() {
+                        Toggle(isOn: $isScrubberFilledChecked) {
+                            Text("Is the scrubber filled?")
+                                .fontWeight(.medium)
+                        }
+                    }
+                    
+                    HStack() {
+                        Text("Time remaining on scrubber in mins")
                             .fontWeight(.medium)
+                        Spacer()
+                        TextField("Minutes",
+                                  value: $timeRemaining,
+                                  formatter: NumberFormatter())
+                                    .keyboardType(.numberPad)
+                                    .frame(width: 80)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
+                } header: {
+                    Text("Steps 5 - 6")
                 }
+
+                    
                 
-                HStack() {
-                    Text("Time remaining on scrubber in mins")
-                        .fontWeight(.medium)
-                    TextField("PP02",
-                              value: $timeRemaining,
-                              formatter: NumberFormatter())
-                                .keyboardType(.numberPad)
-                                .frame(width: 80)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    .padding()
-                    .frame(width: 360, height: 80)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
             }
             
             HStack {
@@ -60,10 +62,7 @@ struct PelagianScrubbersView: View {
                 }
                 .modifier(SmallPrimaryButtonModifier())
             }
-            .navigationTitle("Scrubbers")
             .navigationBarBackButtonHidden(true)
-            .navigationBarTitleDisplayMode(.automatic)
-            .padding()
         }
     }
 }
