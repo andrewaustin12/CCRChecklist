@@ -26,6 +26,11 @@ struct PelagianTanksAnalyzedView: View {
                 Text("PELAGIAN CHECKLIST")
                     .bold()
                     .padding(.leading)
+                    
+                
+                ProgressBarView(progress: Double((350/5) * 0.1))
+                    .padding(.leading)
+                
                 
                 
                 Form {

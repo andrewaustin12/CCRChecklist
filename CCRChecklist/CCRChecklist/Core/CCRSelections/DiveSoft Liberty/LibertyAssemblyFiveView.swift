@@ -23,6 +23,9 @@ struct LibertyAssemblyFiveView: View {
                 
                 LibertyBMCLHeaderView()
                 
+                ProgressBarView(progress: Double((350/8) * 4))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         VStack {

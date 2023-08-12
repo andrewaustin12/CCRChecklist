@@ -27,6 +27,9 @@ struct SWCounterLungView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 2))
+                    .padding(.leading)
+                
                 Form {
                     
                     Section {

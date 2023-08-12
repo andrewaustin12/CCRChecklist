@@ -26,7 +26,7 @@ struct TabHeaderView: View {
 //                .font(.largeTitle)
 //                .fontWeight(.semibold)
         }
-        .frame(height: 200)
+        .frame(height: 150)
         .padding(.leading)
         .background(Color(.systemBlue))
         .foregroundColor(.white)

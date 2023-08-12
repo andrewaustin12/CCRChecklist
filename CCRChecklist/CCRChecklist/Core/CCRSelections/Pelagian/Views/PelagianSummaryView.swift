@@ -12,34 +12,43 @@ struct PelagianSummaryView: View {
     var body: some View {
         VStack {
 
-            ScrollView {
+            VStack(alignment: .leading) {
                 
-                Text("Signature Required")
-                    .font(.title)
+                Text("Summary")
+                    .font(.largeTitle)
                     .fontWeight(.bold)
+                    .padding(.leading)
                 
-                Text("I confirm all of the information entered is true and accurate and as a certified diver I am happy to dive on this unit. (Please type your full name)")
-                    .font(.headline)
-                    .padding()
-                    .multilineTextAlignment(.center)
+                Text("PELAGIAN CHECKLIST")
+                    .bold()
+                    .padding(.leading)
                 
-                TextField("signature", text: $signature)
-                    .frame(width: 360, height: 44)
-                    .font(.title2)
-                    .underline()
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
-                    
-                
+                ProgressBarView(progress: 350)
+                    .padding(.leading)
+                List {
+                    Text("")
+                    Text("")
+                }
             }
             
-            VStack {
-                NavigationLink("Submit", destination: {
+            HStack {
+                NavigationLink{
+                    SWTransportView()
+                        .navigationBarBackButtonHidden(true)
+                        .transition(.move(edge: .leading))
+                } label: {
+                    Text("Back")
+                        .modifier(SmallSecondaryButtonModifier())
+                }
+                
+                NavigationLink{
                     HomeView()
-                })
-                .modifier(PrimaryButtonModifier())
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Complete")
+                        .modifier(SmallPrimaryButtonModifier())
+                }
             }
-            .navigationBarBackButtonHidden(true)
             .padding()
         }
     }

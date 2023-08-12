@@ -27,7 +27,9 @@ struct SWScrubberView: View {
                     .bold()
                     .padding(.leading)
                     
-                    
+                ProgressBarView(progress: Double((350/8) * 1))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         Toggle(isOn: $isCanisterChecked) {

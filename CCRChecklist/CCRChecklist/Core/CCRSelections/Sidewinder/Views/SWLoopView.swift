@@ -28,6 +28,9 @@ struct SWLoopView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 3))
+                    .padding(.leading)
+                
                 List {
                     
                     Section {

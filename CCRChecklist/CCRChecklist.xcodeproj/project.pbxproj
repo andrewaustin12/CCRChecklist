@@ -21,7 +21,6 @@
 		3F7B48312A74BA2600C9479B /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48302A74BA2600C9479B /* TextArea.swift */; };
 		3F7B48352A74BD9100C9479B /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B48342A74BD9100C9479B /* NewNoteView.swift */; };
 		3FA8054E2A6F9F6100452E2E /* SidewinderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */; };
-		3FACEDBE2A75549C0047B4B4 /* TestChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACEDBD2A75549C0047B4B4 /* TestChartView.swift */; };
 		3FACEDC02A7558360047B4B4 /* ChartCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACEDBF2A7558360047B4B4 /* ChartCardView.swift */; };
 		3FACEDC22A75596D0047B4B4 /* CellHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACEDC12A75596D0047B4B4 /* CellHistoryView.swift */; };
 		3FACEDC52A762DD50047B4B4 /* LibertyAssemblyOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACEDC42A762DD50047B4B4 /* LibertyAssemblyOneView.swift */; };
@@ -82,6 +81,9 @@
 		3FFA2F292A7EAAFF00180E52 /* LinearityChartMvO2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F282A7EAAFF00180E52 /* LinearityChartMvO2View.swift */; };
 		3FFA2F2D2A87350900180E52 /* LibertyBMCLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F2C2A87350900180E52 /* LibertyBMCLHeaderView.swift */; };
 		3FFA2F2F2A87472B00180E52 /* PelagieanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F2E2A87472B00180E52 /* PelagieanHeaderView.swift */; };
+		3FFA2F322A879B6200180E52 /* ChecklistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F312A879B6200180E52 /* ChecklistsView.swift */; };
+		3FFA2F362A87D87400180E52 /* TestChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F352A87D87400180E52 /* TestChartView.swift */; };
+		3FFA2F3B2A87F04D00180E52 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F3A2A87F04D00180E52 /* ProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,7 +101,6 @@
 		3F7B48302A74BA2600C9479B /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		3F7B48342A74BD9100C9479B /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 		3FA8054D2A6F9F6100452E2E /* SidewinderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidewinderModel.swift; sourceTree = "<group>"; };
-		3FACEDBD2A75549C0047B4B4 /* TestChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChartView.swift; sourceTree = "<group>"; };
 		3FACEDBF2A7558360047B4B4 /* ChartCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardView.swift; sourceTree = "<group>"; };
 		3FACEDC12A75596D0047B4B4 /* CellHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHistoryView.swift; sourceTree = "<group>"; };
 		3FACEDC42A762DD50047B4B4 /* LibertyAssemblyOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyAssemblyOneView.swift; sourceTree = "<group>"; };
@@ -157,6 +158,9 @@
 		3FFA2F282A7EAAFF00180E52 /* LinearityChartMvO2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearityChartMvO2View.swift; sourceTree = "<group>"; };
 		3FFA2F2C2A87350900180E52 /* LibertyBMCLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyBMCLHeaderView.swift; sourceTree = "<group>"; };
 		3FFA2F2E2A87472B00180E52 /* PelagieanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagieanHeaderView.swift; sourceTree = "<group>"; };
+		3FFA2F312A879B6200180E52 /* ChecklistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistsView.swift; sourceTree = "<group>"; };
+		3FFA2F352A87D87400180E52 /* TestChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChartView.swift; sourceTree = "<group>"; };
+		3FFA2F3A2A87F04D00180E52 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,13 +258,14 @@
 		3FCBDF672A6BCA2400B0DD19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3FFA2F302A879B3900180E52 /* Checklists */,
 				3FCBDF6E2A6BCC2F00B0DD19 /* Authentication */,
+				3FCBDF7D2A6BD85F00B0DD19 /* Home */,
 				3FCBDF842A6BDF7000B0DD19 /* BuildHistory */,
 				3FCBDF8C2A6BEA9E00B0DD19 /* CCRSelections */,
-				3FCBDF722A6BCC8200B0DD19 /* Components */,
-				3FCBDF7D2A6BD85F00B0DD19 /* Home */,
 				3FCBDF852A6BDF8000B0DD19 /* Notes */,
 				3FCBDFBB2A6CB90300B0DD19 /* Profile */,
+				3FCBDF722A6BCC8200B0DD19 /* Components */,
 				3FCBDF692A6BCA6A00B0DD19 /* Root */,
 				3FCBDF6B2A6BCAC800B0DD19 /* TabBar */,
 			);
@@ -325,20 +330,17 @@
 		3FCBDF722A6BCC8200B0DD19 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3FFA2F372A87F02D00180E52 /* ProgressBar */,
 				3FFA2F2B2A8734D100180E52 /* Headers */,
 				3FFA2F2A2A810FC100180E52 /* Timers */,
 				3FFA2EF42A7BF8AB00180E52 /* Charts */,
 				3FFA2EEF2A7BCE6600180E52 /* TestData */,
 				3F7B48272A73B2AB00C9479B /* Buttons */,
 				3FCBDF732A6BCCA200B0DD19 /* TextFieldModifier.swift */,
-				3FCBDF802A6BDAE300B0DD19 /* AuthHeaderView.swift */,
-				3FCBDF882A6BE1D400B0DD19 /* TabHeaderView.swift */,
 				3FCBDF822A6BDB1A00B0DD19 /* RoundedShapeView.swift */,
 				3FCBDFB62A6C500900B0DD19 /* WarningView.swift */,
 				3F7B482C2A74B37C00C9479B /* CustomInputField.swift */,
 				3F7B48302A74BA2600C9479B /* TextArea.swift */,
-				3FACEDBD2A75549C0047B4B4 /* TestChartView.swift */,
-				3FACEDBF2A7558360047B4B4 /* ChartCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -473,11 +475,13 @@
 		3FFA2EF42A7BF8AB00180E52 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				3FACEDBF2A7558360047B4B4 /* ChartCardView.swift */,
 				3FFA2EED2A7BCB3200180E52 /* CellOneChartView.swift */,
 				3FFA2EF52A7BF8BC00180E52 /* CellTwoChartView.swift */,
 				3FFA2EF72A7BF95A00180E52 /* CellThreeChartView.swift */,
 				3FFA2F262A7EA72000180E52 /* LinearityChartMvAirView.swift */,
 				3FFA2F282A7EAAFF00180E52 /* LinearityChartMvO2View.swift */,
+				3FFA2F352A87D87400180E52 /* TestChartView.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -494,10 +498,28 @@
 		3FFA2F2B2A8734D100180E52 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				3FCBDF882A6BE1D400B0DD19 /* TabHeaderView.swift */,
+				3FCBDF802A6BDAE300B0DD19 /* AuthHeaderView.swift */,
 				3FFA2F2C2A87350900180E52 /* LibertyBMCLHeaderView.swift */,
 				3FFA2F2E2A87472B00180E52 /* PelagieanHeaderView.swift */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		3FFA2F302A879B3900180E52 /* Checklists */ = {
+			isa = PBXGroup;
+			children = (
+				3FFA2F312A879B6200180E52 /* ChecklistsView.swift */,
+			);
+			path = Checklists;
+			sourceTree = "<group>";
+		};
+		3FFA2F372A87F02D00180E52 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				3FFA2F3A2A87F04D00180E52 /* ProgressBarView.swift */,
+			);
+			path = ProgressBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +625,7 @@
 				3FFA2F2D2A87350900180E52 /* LibertyBMCLHeaderView.swift in Sources */,
 				3FFA2EFA2A7CC91600180E52 /* LibertyAssemblyFourView.swift in Sources */,
 				3FFA2EFE2A7CD78000180E52 /* LibertyAssemblySixView.swift in Sources */,
+				3FFA2F322A879B6200180E52 /* ChecklistsView.swift in Sources */,
 				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,
 				3FCBDF832A6BDB1A00B0DD19 /* RoundedShapeView.swift in Sources */,
 				3FCBDF872A6BDFAA00B0DD19 /* BuildHistoryView.swift in Sources */,
@@ -610,11 +633,11 @@
 				3FFA2F042A7CDF9E00180E52 /* LibertyAssemblySummaryView.swift in Sources */,
 				3FCBDF742A6BCCA200B0DD19 /* TextFieldModifier.swift in Sources */,
 				3FCBDF812A6BDAE300B0DD19 /* AuthHeaderView.swift in Sources */,
-				3FACEDBE2A75549C0047B4B4 /* TestChartView.swift in Sources */,
 				3FCBDF902A6BEB0E00B0DD19 /* SWComputerView.swift in Sources */,
 				3F7B48262A73B1B300C9479B /* SecondaryButtonModifier.swift in Sources */,
 				3FCBDF922A6BED1500B0DD19 /* SWScrubberView.swift in Sources */,
 				3F7B481C2A7268F900C9479B /* PelagianAssemblyView.swift in Sources */,
+				3FFA2F362A87D87400180E52 /* TestChartView.swift in Sources */,
 				3FFA2EFC2A7CCD5D00180E52 /* LibertyAssemblyFiveView.swift in Sources */,
 				3FFA2F022A7CDCC600180E52 /* LibertyAssemblyEightView.swift in Sources */,
 				3FCBDF7F2A6BD87100B0DD19 /* HomeView.swift in Sources */,
@@ -648,6 +671,7 @@
 				3FCBDFB72A6C500900B0DD19 /* WarningView.swift in Sources */,
 				3FCBDFA22A6C01A200B0DD19 /* SWNegativeCheckView.swift in Sources */,
 				3FCBDF892A6BE1D400B0DD19 /* TabHeaderView.swift in Sources */,
+				3FFA2F3B2A87F04D00180E52 /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

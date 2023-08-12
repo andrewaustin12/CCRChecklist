@@ -8,73 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
+
     var body: some View {
-        NavigationView {
+        VStack{
+            VStack {
+                Text("Home")
+            }
             
             VStack {
-               Text("SELECT A UNIT")
-                    .font(.title)
-                    .bold()
-                
-                VStack {
-                    
-                    // This can be refactored to loop through and array of selectable buttons and make a button component
-                    
-                    NavigationLink {
-                        SWComputerView()
-                            .navigationBarBackButtonHidden(true)
-                    } label: {
-                        Text("Sidewinder")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(width: 360, height: 44)
-                            .background(Color(.systemBlue))
-                            .cornerRadius(8)
+                Section {
+                    VStack {
+                        Text("Cell 1")
+                        CellOneChartView()
                     }
-                    
-                    NavigationLink {
-                        PelagianTanksAnalyzedView()
-                            .navigationBarBackButtonHidden(true)
-                    } label: {
-                        Text("Pelagian")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(width: 360, height: 44)
-                            .background(Color(.systemBlue))
-                            .cornerRadius(8)
+                    VStack {
+                        Text("Cell 2")
+                        CellTwoChartView()
                     }
-                    
-                    NavigationLink {
-                        LibertyAssemblyOneView()
-                            .navigationBarBackButtonHidden(true)
-                    } label: {
-                        Text("Liberty BMCL + BOV")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(width: 360, height: 44)
-                            .background(Color(.systemBlue))
-                            .cornerRadius(8)
+                    VStack {
+                        Text("Cell 3")
+                        CellThreeChartView()
                     }
-                    
-                    Button {
-                        print("SF2")
-                    } label: {
-                        Text("SF2")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(width: 360, height: 44)
-                            .background(Color(.systemBlue))
-                            .cornerRadius(8)
-                    }
-
-                    Spacer()
                 }
-                
             }
+            
+            
+            
         }
     }
 }

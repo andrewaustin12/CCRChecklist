@@ -19,7 +19,10 @@ struct LibertyAssemblyOneView: View {
             VStack(alignment: .leading) {
                 
                 LibertyBMCLHeaderView()
-
+                
+                ProgressBarView(progress: Double((350/8) * 0.1))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         Toggle(isOn: $isWaterTrapChecked) {

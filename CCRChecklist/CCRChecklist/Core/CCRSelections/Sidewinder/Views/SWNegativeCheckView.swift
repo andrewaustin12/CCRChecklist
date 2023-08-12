@@ -29,6 +29,9 @@ struct SWNegativeCheckView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 4))
+                    .padding(.leading)
+                
                 List {
                     
                     Section {

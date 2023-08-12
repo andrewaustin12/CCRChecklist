@@ -24,6 +24,9 @@ struct SWComputerView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 0.1))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         Toggle(isOn: $isBatteryChecked) {

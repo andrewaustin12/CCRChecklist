@@ -28,6 +28,9 @@ struct SWPositiveCheckView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 7))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         Toggle(isOn: $isO2PositiveFlushChecked) {

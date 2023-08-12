@@ -26,6 +26,9 @@ struct SWFlushView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 6))
+                    .padding(.leading)
+                
                 List {
                     
                     Section {

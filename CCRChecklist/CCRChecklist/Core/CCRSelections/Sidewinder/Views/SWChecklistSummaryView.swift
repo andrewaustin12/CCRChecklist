@@ -22,6 +22,8 @@ struct SWChecklistSummaryView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: 350)
+                    .padding(.leading)
                 List {
                     Text("")
                     Text("")

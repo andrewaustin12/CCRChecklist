@@ -26,6 +26,9 @@ struct SWTransportView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/9) * 8))
+                    .padding(.leading)
+                
                 List {
                     Section {
                         Toggle(isOn: $isDSVClosedChecked) {

@@ -25,23 +25,30 @@ struct MainTabView: View {
                     selectedIndex = 1
                 }
                 .tabItem{
-                    Image(systemName: "folder.badge.gearshape")
+                    Image(systemName: "clock")
                 }.tag(1)
-            
-            NotesView()
+            ChecklistsView()
                 .onAppear{
                     selectedIndex = 2
                 }
                 .tabItem{
-                    Image(systemName: "note.text")
+                    Image(systemName: "checklist.unchecked")
                 }.tag(2)
-            CurrentUserProfileView()
+            
+            NotesView()
                 .onAppear{
                     selectedIndex = 3
                 }
                 .tabItem{
-                    Image(systemName: "person")
+                    Image(systemName: "note.text")
                 }.tag(3)
+            CurrentUserProfileView()
+                .onAppear{
+                    selectedIndex = 4
+                }
+                .tabItem{
+                    Image(systemName: "person")
+                }.tag(4)
 
             
 //            CurrentUserProfileView(user: User.MOCK_USERS[0])

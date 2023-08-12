@@ -23,6 +23,10 @@ struct PelagianScrubbersView: View {
                 Text("PELAGIAN CHECKLIST")
                     .bold()
                     .padding(.leading)
+                
+                ProgressBarView(progress: Double((350/5) * 1))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         VStack() {

@@ -18,7 +18,12 @@ struct LibertyAssemblySevenView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
+                
                 LibertyBMCLHeaderView()
+                
+                ProgressBarView(progress: Double((350/8) * 6))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         VStack {

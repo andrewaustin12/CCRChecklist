@@ -19,7 +19,8 @@ struct LibertyAssemblyEightView: View {
         VStack {
             VStack(alignment: .leading) {
                 LibertyBMCLHeaderView()
-                
+                ProgressBarView(progress: Double((350/8) * 7))
+                    .padding(.leading)
                 Form {
                     Section {
                         VStack {

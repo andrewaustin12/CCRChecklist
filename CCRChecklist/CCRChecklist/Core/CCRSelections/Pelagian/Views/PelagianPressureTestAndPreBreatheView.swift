@@ -27,6 +27,9 @@ struct PelagianPressureTestAndPreBreatheView: View {
                     .bold()
                     .padding(.leading)
                 
+                ProgressBarView(progress: Double((350/5) * 4))
+                    .padding(.leading)
+                
                 Form {
                     Section {
                         VStack {
