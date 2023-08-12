@@ -20,84 +20,112 @@ struct PelagianAssemblyView: View {
     @State private var isTandPChecked = false
     @State private var isUnitAssembledChecked = false
     
+    @State private var cellOneReading = ""
+    @State private var cellTwoReading = ""
+    @State private var cellThreeReading = ""
+    
     var body: some View {
         VStack {
-            Text("Assembly Checks")
-                .font(.title)
-            HStack{
+            
+            VStack(alignment: .leading) {
+                Text("Assembly Checks")
+                    .font(.title)
+                    .bold()
+                    .padding(.leading)
+
                 Text("PELAGIAN CHECKLIST")
                     .bold()
-            }
-            
-            Form {
-                Section {
-                    VStack {
-                        Toggle(isOn: $isBatteryTestedChecked) {
-                            Text("Is Battery Tested?")
-                                .fontWeight(.medium)
-                        }
-
-                    }
-                    
-                    VStack() {
-                        // TODO: CHANGE TO 3 NUM INPUTS FOR CELLS 1-3
-                        Toggle(isOn: $isAirCalibrationChecked) {
-                            VStack(alignment: .leading) {
-                                Text("Air Calibration")
-                                    .fontWeight(.medium)
-                                Text("Set to .209?")
-                                    .fontWeight(.medium)
-                            }
-                        }
-
-                    }
-                    
-                    VStack() {
+                    .padding(.leading)
+                Form {
+                    Section {
                         VStack {
-                            Text("Loop Checks")
-//                            Toggle(isOn: $isHoseChecked) {
-//                                Text("Hose Check")
-//                                    .fontWeight(.medium)
-//                            }
-                            Toggle(isOn: $isMushroomValvesChecked) {
-                                Text("Hose Check Valves")
-                                    .fontWeight(.medium)
-                            }
-                            Toggle(isOn: $isPConInhaleChecked) {
-                                Text("P-Con inhale")
-                                    .fontWeight(.medium)
-                            }
-                            Toggle(isOn: $isPConExhaleChecked) {
-                                Text("P-Con exhale")
-                                    .fontWeight(.medium)
-                            }
-                            Toggle(isOn: $isORingChecked) {
-                                Text("O-Ring")
-                                    .fontWeight(.medium)
-                            }
-                            Toggle(isOn: $isCo2PipeChecked) {
-                                Text("CO2 pipe seated in socket")
-                                    .fontWeight(.medium)
-                            }
-                            Toggle(isOn: $isTandPChecked) {
-                                Text("Tees & plugs (twist & tug)")
-                                    .fontWeight(.medium)
+                            Toggle(isOn: $isBatteryTestedChecked) {
+                                Text("Is Battery Tested?")
                             }
                         }
-                    }
-                    
-                    VStack() {
-                        Toggle(isOn: $isUnitAssembledChecked) {
-                            VStack(alignment: .leading) {
-                                Text("Are you satisfied with the")
-                                    .fontWeight(.medium)
-                                Text("assembly of your unit?")
-                                    .fontWeight(.medium)
+                        
+                        VStack {
+                            Text("Air Calibration")
+                                .font(.title3)
+                            // TODO: CHANGE TO 3 NUM INPUTS FOR CELLS 1-3
+                            Toggle(isOn: $isAirCalibrationChecked) {
+                                VStack(alignment: .leading) {
+        
+                                    Text("Set to .209?")
+                                }
+                            }
+                            HStack() {
+                                Text("Cell 1")
+                                Spacer()
+                                TextField("PP02",
+                                          value: $cellOneReading,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+                            HStack() {
+                                Text("Cell 2")
+                                Spacer()
+                                TextField("PP02",
+                                          value: $cellTwoReading,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+                            HStack() {
+                                Text("Cell 3")
+                                Spacer()
+                                TextField("PP02",
+                                          value: $cellThreeReading,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+
+                        }
+                        
+                        VStack() {
+                            VStack {
+                                Text("Loop Checks")
+                                    .font(.title3)
+    //                            Toggle(isOn: $isHoseChecked) {
+    //                                Text("Hose Check")
+    //                                    .fontWeight(.medium)
+    //                            }
+                                Toggle(isOn: $isMushroomValvesChecked) {
+                                    Text("Hose Check Valves")
+                                }
+                                Toggle(isOn: $isPConInhaleChecked) {
+                                    Text("P-Con inhale")
+                                }
+                                Toggle(isOn: $isPConExhaleChecked) {
+                                    Text("P-Con exhale")
+                                }
+                                Toggle(isOn: $isORingChecked) {
+                                    Text("O-Ring")
+                                }
+                                Toggle(isOn: $isCo2PipeChecked) {
+                                    Text("CO2 pipe seated in socket")
+                                }
+                                Toggle(isOn: $isTandPChecked) {
+                                    Text("Tees & plugs (twist & tug)")
+                                }
                             }
                         }
+                        
+                        VStack() {
+                            Toggle(isOn: $isUnitAssembledChecked) {
+                                VStack(alignment: .leading) {
+                                    Text("Are you satisfied with the assembly of your unit?")
+                                }
+                            }
+                        }
+                    } header: {
+                        Text("Steps 7 - 16")
                     }
-                } header: {
-                    Text("Steps 7 - 16")
                 }
             }
             

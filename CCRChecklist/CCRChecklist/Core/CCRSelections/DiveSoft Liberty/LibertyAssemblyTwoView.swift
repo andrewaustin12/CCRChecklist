@@ -15,37 +15,33 @@ struct LibertyAssemblyTwoView: View {
     
     var body: some View {
         VStack{
-            Text("DIVESOFT LIBERTY ASSEMBLY CHECKLIST")
-            Text("BMCL+BOV")
-                .font(.title)
-                .bold()
-                .foregroundColor(Color.red)
-            HStack{
-                Text("Steps 6 - 9")
-                    .bold()
+            VStack(alignment: .leading) {
+                LibertyBMCLHeaderView()
+                
+                Form {
+                    Section {
+                        Toggle(isOn: $isLibertyOringsChecked) {
+                            Text("Head O-rings clean, well lubed and not damaged")
+                        }
+                        
+                        Toggle(isOn: $isLibertyHeadFittingChecked) {
+                            Text("Head fits easily to canister. No visible gap between canister and head.")
+                        }
+                        
+                        Toggle(isOn: $isLibertyHeadPlacedChecked) {
+                            Text(" Canister with head placed in frame lock is secured in backplate")
+                        }
+                        
+                        Toggle(isOn: $isLibertyO2ConnectionChecked) {
+                            Text("Oxygen supply hose connected to head")
+                        }
+                    } header: {
+                        Text("Steps 6 - 9")
+                    }
+
+                    
+                }
             }
-            
-            Form {
-                Toggle(isOn: $isLibertyOringsChecked) {
-                    Text("Head O-rings clean, well lubed and not damaged")
-                }
-                
-                Toggle(isOn: $isLibertyHeadFittingChecked) {
-                    Text("Head fits easily to canister. No visible gap between canister and head.")
-                }
-                
-                Toggle(isOn: $isLibertyHeadPlacedChecked) {
-                    Text(" Canister with head placed in frame lock is secured in backplate")
-                }
-                
-                Toggle(isOn: $isLibertyO2ConnectionChecked) {
-                    Text("Oxygen supply hose connected to head")
-                }
-                
-            }
-            .font(.title3)
-            
-            Spacer()
             
             HStack {
                 NavigationLink{

@@ -24,33 +24,39 @@ struct SWLoopView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                
                 List {
                     
-                    Toggle(isOn: $isMouthPieceChecked) {
-                        Text("Inpect Mouth Piece for holes and tears")
+                    Section {
+                        Toggle(isOn: $isMouthPieceChecked) {
+                            Text("Inpect Mouth Piece for holes and tears")
+                        }
+                        
+                        Toggle(isOn: $isMushroomValveChecked) {
+                            Text("Preform Mushroom Valve Check")
+                        }
+                        
+                        Toggle(isOn: $isORingsChecked) {
+                            Text("Inspect and lube O-Rings")
+                        }
+                        
+                        Toggle(isOn: $isLoopInstalledChecked) {
+                            Text("Install loop to towers (Verify EXHALE goes to the RIGHT tower)")
+                        }
+                        
+                        Toggle(isOn: $isBayonetsChecked) {
+                            Text("Verify bayonets are closed")
+                        }
+                    } header: {
+                        Text("Steps 12-16")
                     }
-                    
-                    Toggle(isOn: $isMushroomValveChecked) {
-                        Text("Preform Mushroom Valve Check")
-                    }
-                    
-                    Toggle(isOn: $isORingsChecked) {
-                        Text("Inspect and lube O-Rings")
-                    }
-                    
-                    Toggle(isOn: $isLoopInstalledChecked) {
-                        Text("Install loop to towers (Verify EXHALE goes to the RIGHT tower)")
-                    }
-                    
-                    Toggle(isOn: $isBayonetsChecked) {
-                        Text("Verify bayonets are closed")
-                    }
+
                     
                 }
-                .font(.title3)
             }
-            
-            Spacer()
             
             HStack {
                 NavigationLink{

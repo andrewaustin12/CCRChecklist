@@ -80,6 +80,8 @@
 		3FFA2F042A7CDF9E00180E52 /* LibertyAssemblySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F032A7CDF9E00180E52 /* LibertyAssemblySummaryView.swift */; };
 		3FFA2F272A7EA72000180E52 /* LinearityChartMvAirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F262A7EA72000180E52 /* LinearityChartMvAirView.swift */; };
 		3FFA2F292A7EAAFF00180E52 /* LinearityChartMvO2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F282A7EAAFF00180E52 /* LinearityChartMvO2View.swift */; };
+		3FFA2F2D2A87350900180E52 /* LibertyBMCLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F2C2A87350900180E52 /* LibertyBMCLHeaderView.swift */; };
+		3FFA2F2F2A87472B00180E52 /* PelagieanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA2F2E2A87472B00180E52 /* PelagieanHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +155,8 @@
 		3FFA2F032A7CDF9E00180E52 /* LibertyAssemblySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyAssemblySummaryView.swift; sourceTree = "<group>"; };
 		3FFA2F262A7EA72000180E52 /* LinearityChartMvAirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearityChartMvAirView.swift; sourceTree = "<group>"; };
 		3FFA2F282A7EAAFF00180E52 /* LinearityChartMvO2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearityChartMvO2View.swift; sourceTree = "<group>"; };
+		3FFA2F2C2A87350900180E52 /* LibertyBMCLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibertyBMCLHeaderView.swift; sourceTree = "<group>"; };
+		3FFA2F2E2A87472B00180E52 /* PelagieanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelagieanHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +325,7 @@
 		3FCBDF722A6BCC8200B0DD19 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3FFA2F2B2A8734D100180E52 /* Headers */,
 				3FFA2F2A2A810FC100180E52 /* Timers */,
 				3FFA2EF42A7BF8AB00180E52 /* Charts */,
 				3FFA2EEF2A7BCE6600180E52 /* TestData */,
@@ -486,6 +491,15 @@
 			path = Timers;
 			sourceTree = "<group>";
 		};
+		3FFA2F2B2A8734D100180E52 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3FFA2F2C2A87350900180E52 /* LibertyBMCLHeaderView.swift */,
+				3FFA2F2E2A87472B00180E52 /* PelagieanHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -576,6 +590,7 @@
 				3FCBDFBA2A6C5F4300B0DD19 /* RegistrationViewModel.swift in Sources */,
 				3FACEDC02A7558360047B4B4 /* ChartCardView.swift in Sources */,
 				3F7B48352A74BD9100C9479B /* NewNoteView.swift in Sources */,
+				3FFA2F2F2A87472B00180E52 /* PelagieanHeaderView.swift in Sources */,
 				3FACEDC92A7632320047B4B4 /* LibertyAssemblyThreeView.swift in Sources */,
 				3FCBDFC72A6CC6EC00B0DD19 /* User.swift in Sources */,
 				3FA8054E2A6F9F6100452E2E /* SidewinderModel.swift in Sources */,
@@ -585,6 +600,7 @@
 				3FFA2EEE2A7BCB3200180E52 /* CellOneChartView.swift in Sources */,
 				3FCBDF9A2A6BFDB800B0DD19 /* SWPositiveCheckView.swift in Sources */,
 				3F7B48312A74BA2600C9479B /* TextArea.swift in Sources */,
+				3FFA2F2D2A87350900180E52 /* LibertyBMCLHeaderView.swift in Sources */,
 				3FFA2EFA2A7CC91600180E52 /* LibertyAssemblyFourView.swift in Sources */,
 				3FFA2EFE2A7CD78000180E52 /* LibertyAssemblySixView.swift in Sources */,
 				3FCBDFB52A6C46A200B0DD19 /* ContentViewModel.swift in Sources */,

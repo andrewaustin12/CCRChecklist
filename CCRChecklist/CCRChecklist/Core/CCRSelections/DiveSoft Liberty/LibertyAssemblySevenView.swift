@@ -17,54 +17,43 @@ struct LibertyAssemblySevenView: View {
     
     var body: some View {
         VStack {
-            Text("DIVESOFT LIBERTY ASSEMBLY CHECKLIST")
-            Text("BMCL+BOV")
-                .font(.title)
-                .bold()
-                .foregroundColor(Color.red)
-            HStack{
-                Text("Steps 26 - 30")
-                    .bold()
-            }
-            
-            VStack {
+            VStack(alignment: .leading) {
+                LibertyBMCLHeaderView()
                 Form {
-                    VStack {
-                        Toggle(isOn: $isBothMavsChecked) {
-                            Text("Both MAVs work and doesn't leak")
-                                .fontWeight(.medium)
+                    Section {
+                        VStack {
+                            Toggle(isOn: $isBothMavsChecked) {
+                                Text("Both MAVs work and doesn't leak")
+                            }
                         }
-                    }
-                    
-                    VStack {
-                        Toggle(isOn: $isAdvInjectsChecked) {
-                            Text("ADV injects gas if pressed and closes when released")
-                                .fontWeight(.medium)
+                        
+                        VStack {
+                            Toggle(isOn: $isAdvInjectsChecked) {
+                                Text("ADV injects gas if pressed and closes when released")
+                            }
                         }
-                    }
-                    VStack {
-                        Toggle(isOn: $isBovSecondStageChecked) {
-                            Text("BOV 2nd stage working")
-                                .fontWeight(.medium)
+                        VStack {
+                            Toggle(isOn: $isBovSecondStageChecked) {
+                                Text("BOV 2nd stage working")
+                            }
                         }
-                    }
-                    VStack {
-                        Toggle(isOn: $isWingInflatorConnectedChecked) {
-                            Text("Wing Inflator hose connected to shoulder harness works and doesn’t leak")
-                                .fontWeight(.medium)
+                        VStack {
+                            Toggle(isOn: $isWingInflatorConnectedChecked) {
+                                Text("Wing Inflator hose connected to shoulder harness works and doesn’t leak")
+                            }
                         }
-                    }
-                    VStack {
-                        Toggle(isOn: $isWeightFastenedChecked) {
-                            Text("Weight fastened")
-                                .fontWeight(.medium)
+                        VStack {
+                            Toggle(isOn: $isWeightFastenedChecked) {
+                                Text("Weight fastened")
+                            }
                         }
+                    } header: {
+                        Text("Steps 26 - 30")
                     }
+
                 }
             }
-            .font(.title3)
-            
-            Spacer()
+
             
             HStack {
                 NavigationLink{

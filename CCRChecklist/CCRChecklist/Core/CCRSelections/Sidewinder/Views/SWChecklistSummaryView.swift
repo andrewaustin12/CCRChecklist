@@ -18,14 +18,15 @@ struct SWChecklistSummaryView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                
                 List {
-                    
                     Text("")
                     Text("")
-    
                 }
             }
-            Spacer()
             
             HStack {
                 NavigationLink{
@@ -36,7 +37,6 @@ struct SWChecklistSummaryView: View {
                     Text("Back")
                         .modifier(SmallSecondaryButtonModifier())
                 }
-                
                 
                 NavigationLink{
                     HomeView()

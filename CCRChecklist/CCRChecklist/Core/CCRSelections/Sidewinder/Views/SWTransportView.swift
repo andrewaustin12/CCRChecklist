@@ -15,8 +15,6 @@ struct SWTransportView: View {
     var body: some View {
         VStack {
             
-            Spacer()
-            
             VStack(alignment: .leading) {
                 
                 Text("Transport")
@@ -24,25 +22,30 @@ struct SWTransportView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                
                 List {
-                    
-                    Toggle(isOn: $isDSVClosedChecked) {
-                        Text("Ensure the DSV is closed")
+                    Section {
+                        Toggle(isOn: $isDSVClosedChecked) {
+                            Text("Ensure the DSV is closed")
+                        }
+                        
+                        Toggle(isOn: $isO2TankClosedChecked) {
+                            Text("Ensure O2 tank is closed")
+                        }
+                        
+                        Toggle(isOn: $isComputerClippedChecked) {
+                            Text("Ensure Computer is cliped and secured")
+                        }
+                        
+                        Text("(Optional) If O2 tank is detached for transport ensure O2 1st stage is secured.")
+                    } header: {
+                        Text("Steps 27-30")
                     }
-                    
-                    Toggle(isOn: $isO2TankClosedChecked) {
-                        Text("Ensure O2 tank is closed")
-                    }
-                    
-                    Toggle(isOn: $isComputerClippedChecked) {
-                        Text("Ensure Computer is cliped and secured")
-                    }
-                    
-                    Text("(Optional) If O2 tank is detached for transport ensure O2 1st stage is secured.")
                 }
-                .font(.title3)
             }
-            Spacer()
             
             HStack {
                 NavigationLink{
@@ -52,7 +55,6 @@ struct SWTransportView: View {
                     Text("Back")
                         .modifier(SmallSecondaryButtonModifier())
                 }
-                
                 
                 NavigationLink{
                     SWChecklistSummaryView()

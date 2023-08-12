@@ -22,29 +22,35 @@ struct SWFlushView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                
                 List {
                     
-                    Toggle(isOn: $isO2FlushChecked) {
-                        Text("Open mouthpiece slightly, flush with O2. Monitor cells for smooth and even increases")
+                    Section {
+                        Toggle(isOn: $isO2FlushChecked) {
+                            Text("Open mouthpiece slightly, flush with O2. Monitor cells for smooth and even increases")
+                        }
+                        
+                        Toggle(isOn: $isO2MillivoltsChecked) {
+                            Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
+                        }
+                        
+                        Toggle(isOn: $isComputerCalibratedChecked) {
+                            Text("Calibrate computer if necessary (make sure loop is at ambient pressure)")
+                        }
+                    } header: {
+                        Text("Steps 22-24")
                     }
-                    
-                    
-                    Toggle(isOn: $isO2MillivoltsChecked) {
-                        Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
-                    }
-                    
-                    
-                    Toggle(isOn: $isComputerCalibratedChecked) {
-                        Text("Calibrate computer if necessary (make sure loop is at ambient pressure)")
-                    }
-                    
-    
                 }
-                .font(.title3)
             }
+            
             VStack {
                 LinearityChartMvO2View()
             }
+            .padding(.top, 10)
+            
             Spacer()
             
             HStack {

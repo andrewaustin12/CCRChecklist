@@ -17,41 +17,45 @@ struct SWPositiveCheckView: View {
     var body: some View {
         VStack {
             
-            VStack() {
+            VStack(alignment: .leading) {
                 
                 Text("Positive Check")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding()
+                    .padding(.leading)
+                
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
                 
                 Form {
-                    
-                    Toggle(isOn: $isO2PositiveFlushChecked) {
-                        Text("Close DSV and OPV, flush with O2. Monitor cells for smooth and even increases until reaching over 1.00 ")
+                    Section {
+                        Toggle(isOn: $isO2PositiveFlushChecked) {
+                            Text("Close DSV and OPV, flush with O2. Monitor cells for smooth and even increases until reaching over 1.00 ")
+                        }
+                        
+                        Toggle(isOn: $isO2MillivoltsChecked) {
+                            Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
+                        }
+                        
+                        Button {
+                            showSheet.toggle()
+                        } label: {
+                            Text("Timer")
+                                .font(.title)
+                                .frame(width: 300, height: 44)
+                                .background(.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            CountdownTimerView()
+                        }
+                    } header: {
+                        Text("Steps 25-26")
                     }
-                    
-                    Toggle(isOn: $isO2MillivoltsChecked) {
-                        Text("Record millivolts from each of the cells at 1.00 and fill lineartiy chart")
-                    }
-                    
-                    Button {
-                        showSheet.toggle()
-                    } label: {
-                        Text("Timer")
-                            .font(.title)
-                            .frame(width: 300, height: 44)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    }
-                    .sheet(isPresented: $showSheet) {
-                        CountdownTimerView()
-                    }
-            
 
                 }
-                .font(.title3)
-
             }
             
             VStack{

@@ -17,13 +17,15 @@ struct SWScrubberView: View {
     var body: some View {
         VStack {
             
-            VStack {
-                Text("SCRUBBERS")
+            VStack(alignment: .leading) {
+                Text("Scrubbers")
                     .font(.title)
                     .bold()
+                    .padding(.leading)
                     
-                
-                Text("Sidewinder Checklist")
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
                     
                     
                 Form {
@@ -48,11 +50,11 @@ struct SWScrubberView: View {
                             Text("Reset stacktime (optional)")
                         }
                     } header: {
-                        Text("Steps 3 - 7")
+                        Text("Steps 3-7")
                     }
 
                 }
-                .font(.title3)
+
             }
             
             Spacer()

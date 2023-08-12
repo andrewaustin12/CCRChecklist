@@ -15,65 +15,50 @@ struct LibertyAssemblySixView: View {
     
     var body: some View {
         VStack {
-            Text("DIVESOFT LIBERTY ASSEMBLY CHECKLIST")
-            Text("BMCL+BOV")
-                .font(.title)
-                .bold()
-                .foregroundColor(Color.red)
-            HStack{
-                Text("Steps 22 - 25")
-                    .bold()
-            }
-            
-            VStack {
+            VStack(alignment: .leading) {
+                LibertyBMCLHeaderView()
+                
                 Form {
-                    VStack{
-                        HStack {
-                            Toggle(isOn: $isOxygenTankOpenedChecked) {
-                                Text("Oxygen tank OPENED")
-                                    .fontWeight(.medium)
+                    Section {
+                        VStack{
+                            HStack {
+                                Toggle(isOn: $isOxygenTankOpenedChecked) {
+                                    Text("Oxygen tank OPENED")
+                                }
+                            }
+                            HStack {
+                                Text("PRESSURE: ")
+                                Spacer()
+                                TextField("BAR",
+                                          value: $libertyOxygenPressure,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             }
                         }
-                            
-                        HStack {
-                            Text("PRESSURE: ")
-                            Spacer()
-                            TextField("BAR",
-                                      value: $libertyOxygenPressure,
-                                      formatter: NumberFormatter())
-                                        .keyboardType(.numberPad)
-                                        .frame(width: 80)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        }
-                    }
-                    
-                    VStack{
-                        
-                        HStack {
-                            Toggle(isOn: $isDiluentTankOpenedChecked) {
-                                Text("Diluent tank OPENED")
-                                    .fontWeight(.medium)
+                        VStack{
+                            HStack {
+                                Toggle(isOn: $isDiluentTankOpenedChecked) {
+                                    Text("Diluent tank OPENED")
+                                }
+                            }
+                            HStack {
+                                Text("PRESSURE:")
+                                Spacer()
+                                TextField("BAR",
+                                          value: $libertyDiluentPressure,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
                             }
                         }
-                            
-                        HStack {
-                            Text("PRESSURE: ")
-                            Spacer()
-                            TextField("BAR",
-                                      value: $libertyDiluentPressure,
-                                      formatter: NumberFormatter())
-                                        .keyboardType(.numberPad)
-                                        .frame(width: 80)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        }
+                    } header: {
+                        Text("Steps 22 - 25")
                     }
-                    
-            
                 }
             }
-            .font(.title3)
-            
-            Spacer()
             
             HStack {
                 NavigationLink{

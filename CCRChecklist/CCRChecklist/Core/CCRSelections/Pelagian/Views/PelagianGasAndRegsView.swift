@@ -22,123 +22,130 @@ struct PelagianGasAndRegsView: View {
     
     var body: some View {
         VStack {
-            Text("PELAGIAN CHECKLIST")
-                .font(.title)
-            Text("Pressure, Regs and Guage Tests")
-                .bold()
             
-            Form {
-                Section{
-                    VStack {
-                        Text("Enter remaining pressure in Bars")
-                            .font(.title2)
+            VStack(alignment: .leading) {
+                Text("Pressure, Regs & Guage Tests")
+                    .font(.title)
+                    .bold()
+                    .padding(.leading)
+
+                Text("PELAGIAN CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                Form {
+                    Section{
+                        VStack {
+                            Text("Enter remaining pressure in Bars")
+                                .font(.title3)
+                            HStack() {
+                                Text("Enter 02")
+                                Spacer()
+                                TextField("PP02", value: $o2Pressure,
+                                          formatter: NumberFormatter())
+                                .keyboardType(.decimalPad)
+                                .frame(width: 80)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+                        }
+                        
                         HStack() {
-                            Text("Enter 02")
+                            Text("Enter Diluent")
                             Spacer()
-                            TextField("PP02", value: $o2Pressure,
+                            TextField("PP02",
+                                      value: $diluentPressure,
                                       formatter: NumberFormatter())
-                            .keyboardType(.decimalPad)
+                            .keyboardType(.numberPad)
                             .frame(width: 80)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
-                    }
-                    
-                    HStack() {
-                        Text("Enter Diluent")
-                        Spacer()
-                        TextField("PP02",
-                                  value: $diluentPressure,
-                                  formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .frame(width: 80)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    
-                    HStack() {
-                        Text("Enter Bailout Gas")
-                        Spacer()
-                        TextField("PP02",
-                                  value: $bailoutPressure,
-                                  formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .frame(width: 80)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    
-                    HStack() {
-                        VStack(alignment: .leading) {
-                            Text("Flow rate at surface ")
-                            Text("Set to (number of turns)")
+                        
+                        HStack() {
+                            Text("Enter Bailout Gas")
+                            Spacer()
+                            TextField("PP02",
+                                      value: $bailoutPressure,
+                                      formatter: NumberFormatter())
+                            .keyboardType(.numberPad)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
-                        Spacer()
-                        TextField("NUM",
-                                  value: $bailoutPressure,
-                                  formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .frame(width: 80)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        HStack() {
+                            VStack(alignment: .leading) {
+                                Text("Flow rate at surface ")
+                                Text("Set to (number of turns)")
+                            }
+                            Spacer()
+                            TextField("NUM",
+                                      value: $bailoutPressure,
+                                      formatter: NumberFormatter())
+                            .keyboardType(.numberPad)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                    } header: {
+                        Text("Steps 17 -20")
                     }
-                } header: {
-                    Text("Steps 17 -20")
+                    Section {
+                        
+                        VStack {
+                            
+                            Text("Gas Injections")
+                                .font(.title3)
+                            
+                            Toggle(isOn: $isO2FeedChecked) {
+                                Text("02 feed")
+                            }
+                            
+                            Divider()
+                            
+                            Toggle(isOn: $isADVChecked) {
+                                Text("ADV")
+                            }
+                            
+                            Divider()
+                            
+                            Toggle(isOn: $isBailoutRegChecked) {
+                                Text("Bailout Reg")
+                            }
+                        }
+                    
+                    } header: {
+                        Text("Steps 21 - 23")
+                    }
+                    
+                    Section {
+                        
+                        VStack {
+                            
+                            Text("Guages Tested")
+                                .font(.title3)
+                            
+                            Toggle(isOn: $isO2FeedGuageChecked) {
+                                Text("02 feed")
+                            }
+                            
+                            Divider()
+                            
+                            Toggle(isOn: $isADVGuageChecked) {
+                                Text("ADV")
+                            }
+                            
+                            Divider()
+                            
+                            Toggle(isOn: $isBailoutRegGuageChecked) {
+                                Text("Bailout Reg")
+                            }
+                        }
+                        
+                    } header: {
+                        Text("Steps 24 - 26")
+                    }
+                    
+                    
                 }
-                Section {
-                    
-                    VStack {
-                        
-                        Text("Gas Injections")
-                            .font(.title2)
-                        
-                        Toggle(isOn: $isO2FeedChecked) {
-                            Text("02 feed")
-                        }
-                        
-                        Divider()
-                        
-                        Toggle(isOn: $isADVChecked) {
-                            Text("ADV")
-                        }
-                        
-                        Divider()
-                        
-                        Toggle(isOn: $isBailoutRegChecked) {
-                            Text("Bailout Reg")
-                        }
-                    }
-                
-                } header: {
-                    Text("Steps 21 - 23")
-                }
-                
-                Section {
-                    
-                    VStack {
-                        
-                        Text("Guages Tested")
-                            .font(.title2)
-                        
-                        Toggle(isOn: $isO2FeedGuageChecked) {
-                            Text("02 feed")
-                        }
-                        
-                        Divider()
-                        
-                        Toggle(isOn: $isADVGuageChecked) {
-                            Text("ADV")
-                        }
-                        
-                        Divider()
-                        
-                        Toggle(isOn: $isBailoutRegGuageChecked) {
-                            Text("Bailout Reg")
-                        }
-                    }
-                    
-                } header: {
-                    Text("Steps 24 - 26")
-                }
-                
-                
             }
+            
             HStack {
                 Button("Back") {
                     presentationMode.wrappedValue.dismiss()

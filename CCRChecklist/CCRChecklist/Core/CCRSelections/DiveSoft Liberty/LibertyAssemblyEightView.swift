@@ -17,78 +17,63 @@ struct LibertyAssemblyEightView: View {
     
     var body: some View {
         VStack {
-            Text("DIVESOFT LIBERTY ASSEMBLY CHECKLIST")
-            Text("BMCL+BOV")
-                .font(.title)
-                .bold()
-                .foregroundColor(Color.red)
-            HStack{
-                Text("Steps 31 - 34")
-                    .bold()
-            }
-            
-            VStack {
+            VStack(alignment: .leading) {
+                LibertyBMCLHeaderView()
+                
                 Form {
-                    VStack {
-                        Toggle(isOn: $isCentralCanisterChecked) {
-                            Text("Central Canister strap fastened")
-                                .fontWeight(.medium)
-                        }
-                    }
-                    
-                    VStack{
-                        HStack {
-                            Toggle(isOn: $isBailoutTankAnalyzedChecked) {
-                                Text("Bailout tank analyzed and assembled")
-                                    .fontWeight(.medium)
+                    Section {
+                        VStack {
+                            Toggle(isOn: $isCentralCanisterChecked) {
+                                Text("Central Canister strap fastened")
                             }
-                        }
-                            
-                    
-                    }
-                    VStack {
-                        HStack {
-                            Toggle(isOn: $isBailoutTankGasPressureChecked) {
-                                Text("Bailout tank gas and pressure ")
-                                    .fontWeight(.medium)
-                            }
-                        }
-                        HStack {
-                            Text("GAS: ")
-                            Spacer()
-                            TextField("PPO2",
-                                      value: $bailoutTankGas,
-                                      formatter: NumberFormatter())
-                                        .keyboardType(.numberPad)
-                                        .frame(width: 80)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
                         }
                         
+                        VStack{
+                            HStack {
+                                Toggle(isOn: $isBailoutTankAnalyzedChecked) {
+                                    Text("Bailout tank analyzed and assembled")
+                                }
+                            }
+                        }
+                        VStack {
+                            HStack {
+                                Toggle(isOn: $isBailoutTankGasPressureChecked) {
+                                    Text("Bailout tank gas and pressure ")
+                                }
+                            }
+                            HStack {
+                                Text("GAS: ")
+                                Spacer()
+                                TextField("PPO2",
+                                          value: $bailoutTankGas,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+                            
+                            HStack {
+                                Text("PRESSURE: ")
+                                Spacer()
+                                TextField("BAR",
+                                          value: $libertyDiluentPressure,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+                        }
                         HStack {
-                            Text("PRESSURE: ")
-                            Spacer()
-                            TextField("BAR",
-                                      value: $libertyDiluentPressure,
-                                      formatter: NumberFormatter())
-                                        .keyboardType(.numberPad)
-                                        .frame(width: 80)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                            Toggle(isOn: $isLightAndDrySuitChecked) {
+                                Text("Diving light canister and dry suit supply fitted (if needed)")
+                            }
                         }
-                    }
-                    HStack {
-                        Toggle(isOn: $isLightAndDrySuitChecked) {
-                            Text("Diving light canister and dry suit supply fitted (if needed)")
-                                .fontWeight(.medium)
-                        }
+                    } header: {
+                        Text("Steps 31 - 34")
                     }
 
-                    
-            
                 }
             }
-            .font(.title3)
-            
-            Spacer()
             
             HStack {
                 NavigationLink{

@@ -17,48 +17,50 @@ struct PelagianPressureTestAndPreBreatheView: View {
     
     var body: some View {
         VStack {
-            Text("PELAGIAN CHECKLIST")
-                .font(.title)
-            Text("Pressure Test and Pre-breathe")
-                .font(.headline)
-                .bold()
-            
-            Form {
-                Section {
-                    VStack {
-                        Toggle(isOn: $isPosTestChecked) {
-                            Text("Positive pressure test satisfactory?")
-                                .fontWeight(.medium)
+            VStack(alignment: .leading) {
+                Text("Pressure Test and Pre-breathe")
+                    .font(.title)
+                    .bold()
+                    .padding(.leading)
+
+                Text("PELAGIAN CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                
+                Form {
+                    Section {
+                        VStack {
+                            Toggle(isOn: $isPosTestChecked) {
+                                Text("Positive pressure test satisfactory?")
+                            }
                         }
-                    }
-                    VStack {
-                        Toggle(isOn: $isNegTestChecked) {
-                            Text("Negative pressure test satisfactory?")
-                                .fontWeight(.medium)
+                        VStack {
+                            Toggle(isOn: $isNegTestChecked) {
+                                Text("Negative pressure test satisfactory?")
+                            }
                         }
-                    }
-                    VStack {
-                        Toggle(isOn: $isPrebreatheChecked) {
-                            Text("10 minute pre-breathe done?")
-                                .fontWeight(.medium)
+                        VStack {
+                            Toggle(isOn: $isPrebreatheChecked) {
+                                Text("10 minute pre-breathe done?")
+                            }
                         }
+                        Button {
+                            showSheet.toggle()
+                        } label: {
+                            Text("Timer")
+                                .font(.title)
+                                .frame(width: 300, height: 44)
+                                .background(.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            CountdownTimerView()
+                        }
+                        
+                    } header: {
+                        Text("Steps 27 - 29")
                     }
-                    Button {
-                        showSheet.toggle()
-                    } label: {
-                        Text("Timer")
-                            .font(.title)
-                            .frame(width: 300, height: 44)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    }
-                    .sheet(isPresented: $showSheet) {
-                        CountdownTimerView()
-                    }
-                    
-                } header: {
-                    Text("Steps 27 - 29")
                 }
             }
             

@@ -22,26 +22,31 @@ struct SWOxygenView: View {
                     .fontWeight(.bold)
                     .padding(.leading)
                 
+                Text("SIDEWINDER CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                
                 List {
                     
-                    Toggle(isOn: $isO2AnalyzedChecked) {
-                        Text("Analyze Oxygen tank")
-                    }
-                    
-                    
-                    Toggle(isOn: $isO2PressureChecked) {
-                        Text("Pressure check Oxygen tank")
-                    }
-                    
-                    
-                    Toggle(isOn: $isO2MountedChecked) {
-                        Text("Mount 02, Properly Route hose and 1st stage. LEAVE TANK OFF.")
+                    Section {
+                        Toggle(isOn: $isO2AnalyzedChecked) {
+                            Text("Analyze Oxygen tank")
+                        }
+                        
+                        
+                        Toggle(isOn: $isO2PressureChecked) {
+                            Text("Pressure check Oxygen tank")
+                        }
+                        
+                        
+                        Toggle(isOn: $isO2MountedChecked) {
+                            Text("Mount 02, Properly Route hose and 1st stage. LEAVE TANK OFF.")
+                        }
+                    } header: {
+                        Text("Steps 19-21")
                     }
                 }
-                .font(.title3)
-                
             }
-            Spacer()
             
             HStack {
                 NavigationLink{
@@ -51,7 +56,6 @@ struct SWOxygenView: View {
                     Text("Back")
                         .modifier(SmallSecondaryButtonModifier())
                 }
-                
                 
                 NavigationLink{
                     SWFlushView()

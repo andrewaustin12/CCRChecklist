@@ -29,24 +29,30 @@ struct SWCounterLungView: View {
                 
                 Form {
                     
-                    Toggle(isOn: $isCounterLungPlacedChecked) {
-                        Text("Place counter lung in harness ensuring waistbelt and wing are in proper positions.")
+                    Section {
+                        Toggle(isOn: $isCounterLungPlacedChecked) {
+                            Text("Place counter lung in harness ensuring waistbelt and wing are in proper positions.")
+                        }
+                        
+                        
+                        Toggle(isOn: $isCounterLungInspectedChecked) {
+                            Text("Inspect, clean and lubricate counter lung O-rings as needed")
+                        }
+                        
+                        Toggle(isOn: $isCounterLungAttachedChecked) {
+                            Text("Attach counter lung to cannister ensuring the clips are set properly")
+                        }
+                        
+                        Toggle(isOn: $isCannistersAttachedChecked) {
+                            Text("Attach cannisters to harness")
+                        }
+                    } header: {
+                        Text("Steps 8-11")
                     }
-                    
-                    Toggle(isOn: $isCounterLungInspectedChecked) {
-                        Text("Inspect, clean and lubricate counter lung O-rings as needed")
-                    }
-                    
-                    Toggle(isOn: $isCounterLungAttachedChecked) {
-                        Text("Attach counter lung to cannister ensuring the clips are set properly")
-                    }
-                    
-                    Toggle(isOn: $isCannistersAttachedChecked) {
-                        Text("Attach cannisters to harness")
-                    }
+
                     
                 }
-                .font(.title3)
+                
             }
             Spacer()
             

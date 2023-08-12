@@ -13,58 +13,62 @@ struct LibertyAssemblyThreeView: View {
     
     var body: some View {
         VStack{
-            Text("DIVESOFT LIBERTY ASSEMBLY CHECKLIST")
-            Text("BMCL+BOV")
-                .font(.title)
-                .bold()
-                .foregroundColor(Color.red)
-            HStack{
-                Text("Steps 6 - 10")
-                    .bold()
-            }
             
-            VStack {
+            VStack(alignment: .leading) {
+                
+                LibertyBMCLHeaderView()
                 
                 Form {
-                    VStack{
-                        Text("Diluent tank analyzed, connected to 1st stage, secured with strap on LEFT side ")
-                            
-                        HStack {
-                            Text("GAS: ")
-                            TextField("PP02",
-                                      value: $libertyDilAnalyzed,
-                                      formatter: NumberFormatter())
-                                        .keyboardType(.numberPad)
-                                        .frame(width: 80)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        }
-                    }
-                    
-                    VStack{
-                        Text("Oxygen tank analyzed, connected to 1st stage, secured with strap on RIGHT side:")
-                            
-                        HStack {
-                            Text("GAS: ")
-                            TextField("PP02",
-                                      value: $libertyDilAnalyzed,
-                                      formatter: NumberFormatter())
-                                        .keyboardType(.numberPad)
-                                        .frame(width: 80)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Section {
+                        VStack{
+                            Text("Diluent tank analyzed, connected to 1st stage, secured with strap on LEFT side: ")
+                                
+                            HStack {
+                                Text("GAS: ")
+                                Spacer()
+                                TextField("PP02",
+                                          value: $libertyDilAnalyzed,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
                         }
                         
-                        VStack {
-                            Text("Oxygen sensors calibrated (note and calculate values in table)")
+                        VStack{
+                            Text("Oxygen tank analyzed, connected to 1st stage, secured with strap on RIGHT side:")
+                                
+                            HStack {
+                                Text("GAS: ")
+                                Spacer()
+                                TextField("PP02",
+                                          value: $libertyDilAnalyzed,
+                                          formatter: NumberFormatter())
+                                            .keyboardType(.numberPad)
+                                            .frame(width: 80)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                            }
+                            
+                            VStack {
+                                Text("Oxygen sensors calibrated \n(note and calculate values in table)")
+                                    .multilineTextAlignment(.center)
+                            }
                         }
+                    } header: {
+                        Text("Steps 6 - 10")
+                            
                     }
+
                 }
                 
-                
-                
+                VStack{
+                    
+                    
+                    LinearityChartMvO2View()
+                }
+                .padding()
             }
-            .font(.title3)
             
-            Spacer()
             
             HStack {
                 NavigationLink{

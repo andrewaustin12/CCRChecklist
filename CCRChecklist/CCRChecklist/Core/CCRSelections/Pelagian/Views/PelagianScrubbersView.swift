@@ -14,41 +14,38 @@ struct PelagianScrubbersView: View {
     
     var body: some View {
         VStack {
-            
-            Text("PELAGIAN CHECKLIST")
-                .font(.title)
-            HStack{
+            VStack(alignment: .leading) {
                 Text("Scrubbers")
+                    .font(.title)
                     .bold()
-            }
+                    .padding(.leading)
 
-            
-            Form {
-                Section {
-                    VStack() {
-                        Toggle(isOn: $isScrubberFilledChecked) {
-                            Text("Is the scrubber filled?")
-                                .fontWeight(.medium)
+                Text("PELAGIAN CHECKLIST")
+                    .bold()
+                    .padding(.leading)
+                Form {
+                    Section {
+                        VStack() {
+                            Toggle(isOn: $isScrubberFilledChecked) {
+                                Text("Is the scrubber filled?")
+                            }
                         }
+                        
+                        HStack() {
+                            Text("Time remaining on scrubber in mins")
+                                
+                            Spacer()
+                            TextField("Minutes",
+                                      value: $timeRemaining,
+                                      formatter: NumberFormatter())
+                                        .keyboardType(.numberPad)
+                                        .frame(width: 80)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                    } header: {
+                        Text("Steps 5 - 6")
                     }
-                    
-                    HStack() {
-                        Text("Time remaining on scrubber in mins")
-                            .fontWeight(.medium)
-                        Spacer()
-                        TextField("Minutes",
-                                  value: $timeRemaining,
-                                  formatter: NumberFormatter())
-                                    .keyboardType(.numberPad)
-                                    .frame(width: 80)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                } header: {
-                    Text("Steps 5 - 6")
                 }
-
-                    
-                
             }
             
             HStack {

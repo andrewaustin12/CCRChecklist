@@ -16,53 +16,58 @@ struct PelagianTanksAnalyzedView: View {
     
     var body: some View {
         VStack {
-            Text("Analyzed Tanks")
-                .font(.title)
-            HStack{
+            
+            VStack(alignment: .leading) {
+                Text("Analyzed Tanks")
+                    .font(.title)
+                    .bold()
+                    .padding(.leading)
+
                 Text("PELAGIAN CHECKLIST")
                     .bold()
-            }
-            Form {
-                Section {
+                    .padding(.leading)
+                
+                
+                Form {
+                    Section {
+                        HStack() {
+                            Text("Enter 02")
+                            Spacer()
+                            TextField("PP02",
+                                      value: $o2,
+                                      formatter: NumberFormatter())
+                            .keyboardType(.numberPad)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                        
+                        
+                        HStack() {
+                            Text("Diluent")
+                            Spacer()
+                            TextField("PP02",
+                                      value: $diluent,
+                                      formatter: NumberFormatter())
+                            .keyboardType(.numberPad)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                        
+                        HStack() {
+                            Text("Bailout Gas")
+                            Spacer()
+                            TextField("PP02",
+                                      value: $bailout,
+                                      formatter: NumberFormatter())
+                            .keyboardType(.numberPad)
+                            .frame(width: 80)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                    } header: {
+                        Text("Steps 1 -4 ")
+                    }
 
-                    
-                    HStack() {
-                        Text("Enter 02")
-                        Spacer()
-                        TextField("PP02",
-                                  value: $o2,
-                                  formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .frame(width: 80)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    
-                    
-                    HStack() {
-                        Text("Diluent")
-                        Spacer()
-                        TextField("PP02",
-                                  value: $diluent,
-                                  formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .frame(width: 80)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    
-                    HStack() {
-                        Text("Bailout Gas")
-                        Spacer()
-                        TextField("PP02",
-                                  value: $bailout,
-                                  formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                        .frame(width: 80)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                } header: {
-                    Text("Steps 1 -4 ")
                 }
-
             }
                 
             HStack {
